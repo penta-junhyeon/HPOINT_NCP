@@ -900,6 +900,7 @@ input[type=search] {
   height: 6.8rem;
   border-radius: 50%;
   background-color: #F5F5F5;
+  overflow: hidden;
 }
 .section.rewards > .inner .rewards-list .rewards-item .text-wrap {
   flex: 1;
@@ -996,6 +997,9 @@ input[type=search] {
 }
 .section.rewards > .inner .rewards-list .rewards-item.fin {
   opacity: 0.4;
+}
+.section.rewards > .inner .rewards-list .rewards-item.fin .img-wrap {
+  filter: grayscale(100%);
 }
 .section.rewards > .inner .rewards-list .rewards-item.fin .text-wrap .caption {
   color: rgba(0, 0, 0, 0.6);

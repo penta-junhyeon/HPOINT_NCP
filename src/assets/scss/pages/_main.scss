@@ -525,6 +525,7 @@
                         height: 6.8rem;
                         border-radius: 50%;
                         background-color: #F5F5F5;
+                        overflow: hidden;
                     }
                     .text-wrap {
                         flex: 1;
@@ -627,6 +628,9 @@
                     }
                     &.fin {
                         opacity: 0.4;
+                        .img-wrap {
+                            filter: grayscale(100%);
+                        }
                         .text-wrap {
                             .caption {
                                 color: rgba(0, 0, 0, 0.60);
