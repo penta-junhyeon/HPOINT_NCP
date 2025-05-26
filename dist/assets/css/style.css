@@ -255,6 +255,9 @@ input[type=search] {
 .modal .modal-body {
   padding: 0 1.05rem;
 }
+.modal .modal-body .img-wrap {
+  margin-bottom: 4rem;
+}
 .modal .modal-body img {
   transform: scale(0.4);
   opacity: 0;
@@ -271,6 +274,7 @@ input[type=search] {
 }
 .modal .modal-body .notice-wrap {
   margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 .modal .modal-body .notice-wrap .bullet-list {
   padding: 2rem 3.1rem 2rem 1.6rem;
@@ -300,9 +304,6 @@ input[type=search] {
   margin-right: 0.5rem;
   background-color: #8e8e8e;
   border-radius: 50%;
-}
-.modal .btn-wrap {
-  margin-top: 2rem;
 }
 .modal .btn-wrap .close {
   width: 100%;
@@ -338,6 +339,7 @@ input[type=search] {
   position: fixed;
   left: 50%;
   bottom: -1rem;
+  max-width: 31.9rem;
   background-color: #fff;
   border: 0.2rem solid #613FFE;
   border-radius: 1.2rem;
@@ -392,6 +394,13 @@ input[type=search] {
   background-color: #000;
 }
 
+.section:not(.kv) > .inner {
+  transform: translateY(7rem);
+  transition: 0.5s ease-in-out;
+}
+.section:not(.kv).up > .inner {
+  transform: translateY(0);
+}
 .section.kv > .inner {
   position: relative;
   padding: 113.87% 4rem 3rem;
@@ -569,6 +578,7 @@ input[type=search] {
   display: block;
   width: 1rem;
   height: 2rem;
+  margin-right: 0.3rem;
   -webkit-mask-image: url("../images/icon_calendarBtn.svg");
           mask-image: url("../images/icon_calendarBtn.svg");
   -webkit-mask-repeat: no-repeat;
@@ -629,24 +639,23 @@ input[type=search] {
   position: absolute;
   background-image: linear-gradient(90deg, #613FFE 0%, #2B7BF4 100%);
   clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
-  transition: 0.2s ease;
+  transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent {
   display: inline-flex;
   background-color: rgba(255, 255, 255, 0.09);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent::before {
-  background-color: #fff;
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent::after {
-  content: attr(data-percent);
-  display: block;
-  width: 2.4rem;
+.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent .num {
+  display: inline-block;
+  min-width: 2.4rem;
   font-family: "Pretendard", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   text-align: right;
   color: rgba(255, 255, 255, 0.8);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent::before {
+  background-color: #fff;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient::after {
   content: "H 완성 보상 받기";
@@ -677,23 +686,23 @@ input[type=search] {
   position: absolute;
   background-image: linear-gradient(90deg, #00CE56 0%, #00D296 100%);
   clip-path: polygon(0 0, 50% 0%, 50% 100%, 0% 100%);
+  transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent {
   display: inline-flex;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent::before {
-  background-color: #fff;
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent::after {
-  content: attr(data-percent);
-  display: block;
-  width: 2.4rem;
+.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent .num {
+  display: inline-block;
+  min-width: 2.4rem;
   font-family: "Pretendard", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   text-align: right;
   color: rgba(255, 255, 255, 0.8);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent::before {
+  background-color: #fff;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient::after {
   content: "출첵 보상 받기";
@@ -817,6 +826,13 @@ input[type=search] {
   font-size: 4.8rem;
   font-weight: 800;
   color: #000;
+}
+.section.rewards > .inner .cur-point .point,
+.section.rewards > .inner .cur-point .unit {
+  font-feature-settings: "tnum"; /* OpenType에서 tabular numbers 사용 */
+  font-variant-numeric: tabular-nums; /* 표준 방식 */
+  font-family: "HGGGothic", monospace; /* 또는 monospace */
+  display: inline-block;
 }
 .section.rewards > .inner .sorting-btn-wrap {
   margin-top: 3.2rem;

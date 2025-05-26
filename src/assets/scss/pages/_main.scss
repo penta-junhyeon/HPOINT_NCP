@@ -2,6 +2,17 @@
     background-color: #000;
 }
 .section {
+    &:not(.kv) {
+        >.inner {
+            transform: translateY(7rem);
+            transition: .5s ease-in-out;
+        }
+    }
+    &:not(.kv).up {
+        >.inner {
+            transform: translateY(0);
+        }
+    }
     &.kv {
         >.inner {
             position: relative;
@@ -186,6 +197,7 @@
                             display: block;
                             width: 1rem;
                             height: 2rem;
+                            margin-right: .3rem;
                             mask-image: url("../images/icon_calendarBtn.svg");
                             mask-repeat: no-repeat;
                             mask-position: center left;
@@ -245,22 +257,21 @@
                             position: absolute;
                             background-image: linear-gradient(90deg, #613FFE 0%, #2B7BF4 100%);
                             clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
-                            transition: .2s ease;
+                            transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
                             .percent {
                                 display: inline-flex;
                                 background-color: rgba(255, 255, 255, 0.09);
-                                &::before {
-                                    background-color: #fff;
-                                }
-                                &::after {
-                                    content: attr(data-percent);
-                                    display: block;
-                                    width: 2.4rem;
+                                .num {
+                                    display: inline-block;
+                                    min-width: 2.4rem;
                                     font-family: "Pretendard", sans-serif;
                                     font-size: 1.4rem;
                                     font-weight: 500;
                                     text-align: right;
                                     color: rgba(255, 255, 255, 0.80);
+                                }
+                                &::before {
+                                    background-color: #fff;
                                 }
                             }
                             &::after {
@@ -295,21 +306,21 @@
                             position: absolute;
                             background-image: linear-gradient(90deg, #00CE56 0%, #00D296 100%);
                             clip-path: polygon(0 0, 50% 0%, 50% 100%, 0% 100%);
+                            transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
                             .percent {
                                 display: inline-flex;
                                 background-color: rgba(255, 255, 255, 0.20);
-                                &::before {
-                                    background-color: #fff;
-                                }
-                                &::after {
-                                    content: attr(data-percent);
-                                    display: block;
-                                    width: 2.4rem;
+                                .num {
+                                    display: inline-block;
+                                    min-width: 2.4rem;
                                     font-family: "Pretendard", sans-serif;
                                     font-size: 1.4rem;
                                     font-weight: 500;
                                     text-align: right;
                                     color: rgba(255, 255, 255, 0.80);
+                                }
+                                &::before {
+                                    background-color: #fff;
                                 }
                             }
                             &::after {
@@ -443,6 +454,13 @@
                 font-size: 4.8rem;
                 font-weight: 800;
                 color: #000;
+                .point,
+                .unit {
+                    font-feature-settings: 'tnum'; /* OpenType에서 tabular numbers 사용 */
+                    font-variant-numeric: tabular-nums; /* 표준 방식 */
+                    font-family: 'HGGGothic', monospace; /* 또는 monospace */
+                    display: inline-block;
+                }
             }
             .sorting-btn-wrap {
                 margin-top: 3.2rem;

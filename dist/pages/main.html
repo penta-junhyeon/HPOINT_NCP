@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>HPOINT 캘린더 이벤트</title>
+
+    <!-- Swiper -->
     <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
     <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
 
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="../assets/lib/bootstrap/bootstrap.min.css">
     <script src="../assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- CountUp -->
+    <script src="../assets/lib/countUp/countUp.umd.js"></script>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/ui.js"></script>
@@ -46,7 +52,7 @@
                     </div>
                 </div>
                 <div class="btn-calendar">
-                    <div class="btn-wrap h-complete" data-percent='25'> <!-- H 일부 요소 완성 개수에 따른 data-pecent값(구현필요) / 값 변경 시 프로그레스 및 .num, .percent 값 변화(구현완료) -->
+                    <div class="btn-wrap h-complete" data-percent='90'> <!-- H 일부 요소 완성 개수에 따른 data-pecent값(구현필요) / 값 변경 시 프로그레스 및 .num, .percent 값 변화(구현완료) -->
                         <button type='button' class="btn">
                             <span class="percent">
                                 <span class="num"></span>
@@ -54,7 +60,9 @@
                             <em class="btn-text">H 완성 보상 받기</em>
                         </button>
                         <div class="btn-gradient">
-                            <span class="percent"></span>
+                            <span class="percent">
+                                <span class="num"></span>
+                            </span>
                         </div>
                     </div>
                     <div class="btn-wrap attend-complete" data-percent='63'> <!-- 출석체크 완료 개수에 따른 data-percent값 변동(구현필요) / 값 변경 시 프로그레스 및 .num, .percent 값 변화(구현완료) -->
@@ -65,7 +73,9 @@
                             <em class="btn-text">출첵 보상 받기</em>
                         </button>
                         <div class="btn-gradient">
-                            <span class="percent"></span>
+                            <span class="percent">
+                                <span class="num"></span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -89,7 +99,10 @@
                         <span class="btn-text">6월 적립 포인트</span>
                     </button>
                 </div>
-                <em class="cur-point">4,620 P</em>
+                <em class="cur-point">
+                    <span class="point">0</span>
+                    <span class="unit">P</span>
+                </em>
                 <div class="sorting-btn-wrap btn-swiper">
                     <ul class="sorting-btn-list swiper-wrapper">
                         <li class="swiper-slide">
@@ -196,6 +209,7 @@
     </div>
 </div>
 
+<!-- 플러스포인트 당첨 모달 -->
 <!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
@@ -204,8 +218,10 @@
             <p class="desc">H.LIGHT DAY 참여완료</p>
         </div>
         <div class="modal-body">
-            <img src="../assets/images/modal_img1.jpg" alt="플러스포인트 당첨 이미지">
-            <p class="desc">플러스포인트 당첨</p>
+            <div class="img-wrap">
+                <img src="../assets/images/modal_img1.jpg" alt="플러스포인트 당첨 이미지">
+                <p class="desc">플러스포인트 당첨</p>
+            </div>
             <div class="notice-wrap">
                 <ul class="bullet-list">
                     <li>
@@ -230,6 +246,7 @@
     </div>
 </div> -->
 
+<!-- H.Point 당첨 모달 -->
 <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
@@ -238,8 +255,10 @@
                 <p class="desc">이번 달 H를 완성하셨네요<br>하이라이트 혜택을 받아가세요</p>
             </div>
             <div class="modal-body">
-                <img src="../assets/images/modal_img2.jpg" alt="H.Point 당첨 이미지">
-                <p class="desc">H.Point 100P 당첨</p>
+                <div class="img-wrap">
+                    <img src="../assets/images/modal_img2.jpg" alt="H.Point 100P 당첨 이미지">
+                    <p class="desc">H.Point 100P 당첨</p>
+                </div>
                 <div class="notice-wrap">
                     <ul class="bullet-list">
                         <li>
@@ -263,5 +282,122 @@
         </div>
     </div>
 </div>
+
+<!-- H 미완성 모달 -->
+<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-head">
+            <em class="title">아쉬워요</em>
+            <p class="desc">이번 달 H를 완성하지 못했어요<br>다음달 미션을 노려보세요</p>
+        </div>
+        <div class="modal-body">
+            <div class="img-wrap">
+                <img src="../assets/images/modal_img3.jpg" alt="H 미완성 이미지">
+            </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<!-- 출석 완료 모달 -->
+<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-head">
+            <em class="title">오늘의 출석 완료</em>
+            <p class="desc">혜택이 지급됐어요!</p>
+        </div>
+        <div class="modal-body">
+            <div class="img-wrap">
+                <img src="../assets/images/modal_img4.jpg" alt="H.Point 30P 당첨 이미지">
+                <p class="desc">H.Point 30P 당첨</p>
+            </div>
+            <div class="notice-wrap">
+                <ul class="bullet-list">
+                    <li>
+                        <p class="bullet-text">본 쿠폰은 10만원 이상 구매 시, 사용 가능합니다.</p>
+                    </li>
+                    <li>
+                        <p class="bullet-text">지급된 혜택은 선물하기/전환/캐시백 등은 불가합니다.</p>
+                    </li>
+                    <li>
+                        <p class="bullet-text">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</p>
+                    </li>
+                    <li>
+                        <p class="bullet-text">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">보상 받기</span></button>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<!-- 출석 완출 미션 실패 모달 -->
+<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-head">
+            <em class="title">아쉬워요</em>
+            <p class="desc">이번달 출석 미션을 달성하지 못했어요<br>다음달 미션을 노려보세요</p>
+        </div>
+        <div class="modal-body">
+            <div class="img-wrap">
+                <img src="../assets/images/modal_img6.jpg" alt="완출 미션 실패 이미지">
+            </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<!-- 중복 참여 모달 -->
+<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-head">
+            <em class="title">오늘 이미 참여하셨어요</em>
+            <p class="desc">내일 또 만나요!</p>
+        </div>
+        <div class="modal-body">
+            <div class="img-wrap">
+                <img src="../assets/images/modal_img7.jpg" alt="Complete 이미지">
+            </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<!-- 출석 체크 완료 모달 -->
+<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-head">
+            <em class="title">오늘의 출석 체크 완료!</em>
+            <p class="desc">선물을 가져오고 있어요!<br>잠시만 기다려주세요!</p>
+        </div>
+        <div class="modal-body">
+            <div class="img-wrap">
+                <img src="../assets/images/modal_img8.jpg" alt="출석 체크 완료 이미지">
+            </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+        </div>
+      </div>
+    </div>
+</div> -->
 
 </html>
