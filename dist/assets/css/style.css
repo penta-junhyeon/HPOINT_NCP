@@ -428,13 +428,13 @@ input[type=search] {
 .section.kv > .inner .kv-text {
   position: relative;
   margin-bottom: 3rem;
-  font-size: 1.6rem;
+  font-size: min(4.27vw, 3.2rem);
   font-weight: 600;
   color: #303030;
   text-align: center;
   opacity: 0;
   transform: translateY(-2rem);
-  transition: 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .section.kv > .inner .kv-typo {
   padding: 0 11.53%;
