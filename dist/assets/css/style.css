@@ -904,9 +904,8 @@ input[type=search] {
   visibility: hidden;
 }
 .section.noti > .inner .input-noti input[type=checkbox]:checked + label:after {
-  left: calc(100% - 0.2rem);
+  left: calc(100% - 3.9rem);
   background-image: url("../images/icon_checkbox_enable.svg");
-  transform: translateX(-100%);
 }
 .section.noti > .inner .input-noti label {
   position: relative;
