@@ -923,8 +923,8 @@ input[type=search] {
   position: absolute;
   top: 0.2rem;
   left: 0.2rem;
-  width: 3.7rem;
-  height: 3.7rem;
+  width: 3.6rem;
+  height: 3.6rem;
   background-image: url("../images/icon_checkbox_disable.svg");
   transition: 0.3s ease;
 }
