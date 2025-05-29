@@ -519,6 +519,7 @@ input[type=search] {
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap {
   width: 4.8rem;
+  min-height: 7.2rem;
   padding: 0.4rem 0;
   text-align: center;
 }
