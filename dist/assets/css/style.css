@@ -414,6 +414,9 @@ input[type=search] {
 .section:not(.kv).up > .inner {
   transform: translateY(0);
 }
+.section.kv {
+  overflow: hidden;
+}
 .section.kv > .inner {
   --scale: scale(1.4);
   position: relative;
