@@ -7,8 +7,8 @@
     <div class="wrap">
         <section class="section kv">
             <div class="inner">
-                <img src="../assets/images/kv_typo.png" alt="H LIGHT DAY" class="kv-typo"> 
                 <p class="kv-text">H.LIGHT DAY<br>캘린더 출석체크하고 혜택 쿠폰 받자!</p>
+                <img src="../assets/images/kv_typo.svg" alt="H LIGHT DAY 하이라이트 데이" class="kv-typo"> 
             </div>
         </section>
         <section class="section calendar">
@@ -30,11 +30,10 @@
                     <div class="month-grid">
                         <!-- 캘린더 영역 -->
                         <!-- 출석체크 활성화: .day-wrap 요소에 enable 클래스 추가(구현필요) -->
-
                     </div>
                 </div>
                 <div class="btn-calendar">
-                    <div class="btn-wrap h-complete" data-percent='90'> <!-- H 일부 요소 완성 개수에 따른 data-pecent값(구현필요) / 값 변경 시 프로그레스 및 .num, .percent 값 변화(구현완료) -->
+                    <div class="btn-wrap h-complete" data-percent='30'> <!-- H 일부 요소 완성 개수에 따른 data-pecent값(구현필요) / 값 변경 시 프로그레스 및 .num, .percent 값 변화(구현완료) -->
                         <button type='button' class="btn">
                             <span class="percent">
                                 <span class="num"></span>
@@ -47,7 +46,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="btn-wrap attend-complete" data-percent='63'> <!-- 출석체크 완료 개수에 따른 data-percent값 변동(구현필요) / 값 변경 시 프로그레스 및 .num, .percent 값 변화(구현완료) -->
+                    <div class="btn-wrap attend-complete" data-percent='48'> <!-- 출석체크 완료 개수에 따른 data-percent값 변동(구현필요) / 값 변경 시 프로그레스 및 .num, .percent 값 변화(구현완료) -->
                         <button type="button" class="btn"> <!-- 100% 다 채워졌을 때 버튼 활성화: complete 클래스 추가 -->
                             <span class="percent">
                                 <span class="num"></span>
@@ -60,7 +59,42 @@
                             </span>
                         </div>
                     </div>
+                    <div class="btn-wrap h-complete" data-percent='100'>
+                        <button type='button' class="btn">
+                            <span class="percent">
+                                <span class="num"></span>
+                            </span>
+                            <em class="btn-text">H 완성 보상 받기</em>
+                        </button>
+                        <div class="btn-gradient">
+                            <span class="percent">
+                                <span class="num"></span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
+                <!-- <div class="calendar-progress">
+                    <div class="segment h-complete">
+                        <em class="seg-text">H 완성 <span class="percent"></span> !!</em>
+                        <div class="progress-wrap">
+                            <div class="inner">
+                                <div class="badge">
+                                    <span class="blind"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment attend-complete">
+                        <em class="seg-text">출석 완료 <span class="percent"></span> !!</em>
+                        <div class="progress-wrap">
+                            <div class="inner">
+                                <div class="badge">
+                                    <span class="blind"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </section>
         <section class="section noti">
