@@ -911,6 +911,7 @@ input[type=search] {
 }
 .section.rewards {
   margin-top: 0.4rem;
+  overflow: hidden;
 }
 .section.rewards > .inner {
   padding: 4rem 2rem;

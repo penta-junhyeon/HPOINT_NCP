@@ -549,6 +549,7 @@
     }
     &.rewards {
         margin-top: .4rem;
+        overflow: hidden;
         >.inner {
             padding: 4rem 2rem;
             background-color: #fff;
