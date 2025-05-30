@@ -269,6 +269,8 @@
                         display: flex;
                         width: 100%;
                         padding: 2.1rem 1.4rem;
+                        color: #A9B7C2;
+                        background-color: #EFF3F6;
                         pointer-events: none;
                         .num {
                             width: 2.4rem;
@@ -291,19 +293,45 @@
                             pointer-events: auto;
                         }
                     }
-                    .btn-gradient {
+                    .btn-progress {
                         position: absolute;
                         top: 0;
                         bottom: 0;
                         left: 0;
                         padding: 2.1rem 1.4rem;
                         width: 100%;
+                        clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+                        transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
                         pointer-events: none;
+                        .btn-text {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            display: block;
+                            font-size: 2.4rem;
+                            font-weight: 600;
+                            color: #fff;
+                            white-space: nowrap;
+                            transform: translate(-50%, -50%);
+                        }
+                        .percent {
+                            display: inline-flex;
+                            &::before {
+                                background-color: #fff;
+                            }
+                            .num {
+                                display: inline-block;
+                                min-width: 2.4rem;
+                                font-family: "Pretendard", sans-serif;
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                                color: rgba(255, 255, 255, 0.80);
+                                text-align: right;
+                            }
+                        }
                     }
-                    &.h-complete {
+                    &.style1 {
                         .btn {
-                            background-color: #EFF3F6;
-                            color: #A9B7C2;
                             .percent {
                                 background-color: rgba(97, 63, 254, 0.09);
                                 .num {
@@ -314,45 +342,15 @@
                                 }
                             }
                         }
-                        .btn-gradient {
-                            position: absolute;
+                        .btn-progress {
                             background-color: #4E2BF4;
-                            clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
-                            transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
                             .percent {
-                                display: inline-flex;
                                 background-color: rgba(255, 255, 255, 0.09);
-                                .num {
-                                    display: inline-block;
-                                    min-width: 2.4rem;
-                                    font-family: "Pretendard", sans-serif;
-                                    font-size: 1.4rem;
-                                    font-weight: 500;
-                                    text-align: right;
-                                    color: rgba(255, 255, 255, 0.80);
-                                }
-                                &::before {
-                                    background-color: #fff;
-                                }
-                            }
-                            &::after {
-                                content: 'H 완성 보상 받기';
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                display: block;
-                                font-size: 2.4rem;
-                                font-weight: 600;
-                                color: #fff;
-                                white-space: nowrap;
-                                transform: translate(-50%, -50%);
                             }
                         }
                     }
-                    &.attend-complete {
+                    &.style2 {
                         .btn {
-                            background-color: #EFF3F6;
-                            color: #A9B7C2;
                             .percent {
                                 background-color: rgba(0, 206, 210, 0.09);
                                 .num {
@@ -363,38 +361,29 @@
                                 }
                             }
                         }
-                        .btn-gradient {
-                            position: absolute;
+                        .btn-progress {
                             background-color: #00CED2;
-                            clip-path: polygon(0 0, 50% 0%, 50% 100%, 0% 100%);
-                            transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
                             .percent {
-                                display: inline-flex;
                                 background-color: rgba(255, 255, 255, 0.15);
+                            }
+                        }
+                    }
+                    &.style3 {
+                        .btn {
+                            .percent {
+                                background-color: rgba(58, 155, 255, 0.09); // 밝은 하늘색 배경
                                 .num {
-                                    display: inline-block;
-                                    min-width: 2.4rem;
-                                    font-family: "Pretendard", sans-serif;
-                                    font-size: 1.4rem;
-                                    font-weight: 500;
-                                    text-align: right;
-                                    color: rgba(255, 255, 255, 0.80);
+                                    color: rgba(58, 155, 255, 0.70); // 중간 밝기
                                 }
                                 &::before {
-                                    background-color: #fff;
+                                    background-color: #3A9BFF; // 메인 블루
                                 }
                             }
-                            &::after {
-                                content: '출첵 보상 받기';
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                display: block;
-                                font-size: 2.4rem;
-                                font-weight: 600;
-                                color: #fff;
-                                white-space: nowrap;
-                                transform: translate(-50%, -50%);
+                        }
+                        .btn-progress {
+                            background-color: #2F89E5; // 살짝 더 어두운 블루
+                            .percent {
+                                background-color: rgba(255, 255, 255, 0.12); // 공통 흐림
                             }
                         }
                     }

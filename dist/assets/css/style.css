@@ -662,6 +662,8 @@ input[type=search] {
   display: flex;
   width: 100%;
   padding: 2.1rem 1.4rem;
+  color: #A9B7C2;
+  background-color: #EFF3F6;
   pointer-events: none;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap .btn .num {
@@ -684,108 +686,87 @@ input[type=search] {
 .section.calendar > .inner .btn-calendar .btn-wrap .btn.complete {
   pointer-events: auto;
 }
-.section.calendar > .inner .btn-calendar .btn-wrap .btn-gradient {
+.section.calendar > .inner .btn-calendar .btn-wrap .btn-progress {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   padding: 2.1rem 1.4rem;
   width: 100%;
-  pointer-events: none;
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn {
-  background-color: #EFF3F6;
-  color: #A9B7C2;
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn .percent {
-  background-color: rgba(97, 63, 254, 0.09);
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn .percent .num {
-  color: rgba(97, 63, 254, 0.7);
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn .percent::before {
-  background-color: #613FFE;
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient {
-  position: absolute;
-  background-color: #4E2BF4;
   clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
   transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent {
+.section.calendar > .inner .btn-calendar .btn-wrap .btn-progress .btn-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap .btn-progress .percent {
   display: inline-flex;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap .btn-progress .percent::before {
+  background-color: #fff;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap .btn-progress .percent .num {
+  display: inline-block;
+  min-width: 2.4rem;
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn .percent {
+  background-color: rgba(97, 63, 254, 0.09);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn .percent .num {
+  color: rgba(97, 63, 254, 0.7);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn .percent::before {
+  background-color: #613FFE;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn-progress {
+  background-color: #4E2BF4;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn-progress .percent {
   background-color: rgba(255, 255, 255, 0.09);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent .num {
-  display: inline-block;
-  min-width: 2.4rem;
-  font-family: "Pretendard", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 500;
-  text-align: right;
-  color: rgba(255, 255, 255, 0.8);
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient .percent::before {
-  background-color: #fff;
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.h-complete .btn-gradient::after {
-  content: "H 완성 보상 받기";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #fff;
-  white-space: nowrap;
-  transform: translate(-50%, -50%);
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn {
-  background-color: #EFF3F6;
-  color: #A9B7C2;
-}
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn .percent {
+.section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn .percent {
   background-color: rgba(0, 206, 210, 0.09);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn .percent .num {
+.section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn .percent .num {
   color: rgba(0, 206, 210, 0.7);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn .percent::before {
+.section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn .percent::before {
   background-color: #00C48D;
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient {
-  position: absolute;
+.section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn-progress {
   background-color: #00CED2;
-  clip-path: polygon(0 0, 50% 0%, 50% 100%, 0% 100%);
-  transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent {
-  display: inline-flex;
+.section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn-progress .percent {
   background-color: rgba(255, 255, 255, 0.15);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent .num {
-  display: inline-block;
-  min-width: 2.4rem;
-  font-family: "Pretendard", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 500;
-  text-align: right;
-  color: rgba(255, 255, 255, 0.8);
+.section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn .percent {
+  background-color: rgba(58, 155, 255, 0.09);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient .percent::before {
-  background-color: #fff;
+.section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn .percent .num {
+  color: rgba(58, 155, 255, 0.7);
 }
-.section.calendar > .inner .btn-calendar .btn-wrap.attend-complete .btn-gradient::after {
-  content: "출첵 보상 받기";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #fff;
-  white-space: nowrap;
-  transform: translate(-50%, -50%);
+.section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn .percent::before {
+  background-color: #3A9BFF;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn-progress {
+  background-color: #2F89E5;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn-progress .percent {
+  background-color: rgba(255, 255, 255, 0.12);
 }
 .section.calendar > .inner .btn-calendar .btn-wrap + .btn-wrap {
   margin-top: 0.8rem;
