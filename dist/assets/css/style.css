@@ -242,6 +242,11 @@ input[type=search] {
   font-family: "HGGGothic", sans-serif;
 }
 
+.modal .modal-dialog {
+  justify-self: center;
+  max-width: 33.5rem;
+  margin: 0.5rem 2rem;
+}
 .modal .modal-content {
   padding: 4rem 2rem 2rem 2rem;
   border-radius: 1.2rem;
@@ -266,13 +271,20 @@ input[type=search] {
   text-align: center;
 }
 .modal .modal-body {
-  padding: 0 1.05rem;
+  padding: 0;
 }
 .modal .modal-body .img-wrap {
+  padding: 0 0.65rem;
   margin-bottom: 4rem;
 }
 .modal .modal-body img {
+  max-width: 29.4rem;
+  width: 100%;
+  height: 18.9rem;
+  margin: 0 auto;
   transform: scale(0.4);
+  -o-object-fit: contain;
+     object-fit: contain;
   opacity: 0;
   transition: 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
@@ -286,13 +298,16 @@ input[type=search] {
   transition: 0.4s 0.2s ease-in-out;
 }
 .modal .modal-body .notice-wrap {
+  padding: 2rem 1rem 2rem 1.6rem;
   margin-top: 4rem;
   margin-bottom: 2rem;
-}
-.modal .modal-body .notice-wrap .bullet-list {
-  padding: 2rem 3.1rem 2rem 1.6rem;
   background-color: #F5F5F5;
   border-radius: 1.2rem;
+}
+.modal .modal-body .notice-wrap .bullet-list {
+  max-height: 12rem;
+  padding-right: 2rem;
+  overflow-y: auto;
 }
 .modal .modal-body .notice-wrap .bullet-list > li + li {
   margin-top: 0.7rem;
@@ -389,6 +404,7 @@ input[type=search] {
 }
 .toast .toast-body::before {
   content: "";
+  flex-shrink: 0;
   display: block;
   width: 3.6rem;
   height: 3.6rem;
@@ -443,19 +459,6 @@ input[type=search] {
   opacity: 0;
   transition: 0.5s ease-in-out;
 }
-.section.kv > .inner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/kv_object.png");
-  background-size: cover;
-  transform: var(--scale);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-}
 .section.kv.act > .inner {
   --scale: scale(1);
 }
@@ -502,11 +505,11 @@ input[type=search] {
   justify-content: center;
 }
 .section.calendar > .inner .calendar-body .weekdays-wrap .weekday {
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.8rem;
+  max-width: 4.8rem;
+  width: 100%;
   height: 4.8rem;
   font-family: "Pretendard", sans-serif;
   font-size: 1.2rem;
@@ -518,9 +521,11 @@ input[type=search] {
   justify-content: center;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap {
-  width: 4.8rem;
-  min-height: 7.2rem;
+  max-width: 4.6rem;
+  width: 100%;
+  min-height: 7rem;
   padding: 0.4rem 0;
+  margin: 0.1rem;
   text-align: center;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap .day {
@@ -547,7 +552,13 @@ input[type=search] {
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.enable .btn {
   background-image: url("../images/icon_H_enable.png");
-  transform: rotate3d(0, 1, 0, 180deg);
+  transition: 0.3s ease-in-out;
+  animation: test2 0.3s ease-in-out;
+}
+@keyframes test2 {
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-] .btn {
   width: 4.1rem;
@@ -558,26 +569,26 @@ input[type=search] {
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable .btn {
   animation: bounceGift 0.4s ease-in forwards;
 }
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.red .btn {
-  background-image: url("../images/icon_gift_red.png");
-}
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.orange .btn {
-  background-image: url("../images/icon_gift_orange.png");
-}
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.yellow .btn {
-  background-image: url("../images/icon_gift_yellow.png");
-}
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.green .btn {
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color1 .btn {
   background-image: url("../images/icon_gift_green.png");
 }
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.skyblue .btn {
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color2 .btn {
+  background-image: url("../images/icon_gift_pink.png");
+}
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color3 .btn {
+  background-image: url("../images/icon_gift_yellow.png");
+}
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color4 .btn {
+  background-image: url("../images/icon_gift_pink2.png");
+}
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color5 .btn {
   background-image: url("../images/icon_gift_skyblue.png");
 }
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.blue .btn {
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color6 .btn {
   background-image: url("../images/icon_gift_blue.png");
 }
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.purple .btn {
-  background-image: url("../images/icon_gift_purple.png");
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color7 .btn {
+  background-image: url("../images/icon_gift_blue2.png");
 }
 @keyframes bounceGift {
   0% {
@@ -593,30 +604,10 @@ input[type=search] {
     transform: scale(1.1);
   }
 }
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap.h-top {
-  background-color: #EFF3F6;
-  border-top: 0.1rem solid #4E2BF4;
-  border-left: 0.1rem solid #4E2BF4;
-  border-right: 0.1rem solid #4E2BF4;
-  border-top-left-radius: 0.8rem;
-  border-top-right-radius: 0.8rem;
-}
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap.h-center {
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap.h-day {
   background-color: #EFF3F6;
   border: 0.1rem solid #4E2BF4;
-}
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap.h-deadCenter {
-  background-color: #EFF3F6;
-  border-top: 0.1rem solid #4E2BF4;
-  border-bottom: 0.1rem solid #4E2BF4;
-}
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap.h-bot {
-  background-color: #EFF3F6;
-  border-bottom: 0.1rem solid #4E2BF4;
-  border-left: 0.1rem solid #4E2BF4;
-  border-right: 0.1rem solid #4E2BF4;
-  border-bottom-left-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
+  border-radius: 0.8rem;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.prev-month, .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.next-month {
   opacity: 0.4;
@@ -628,10 +619,33 @@ input[type=search] {
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.today .day {
   font-weight: 700;
   color: #fff;
-  background-color: #4E2BF4;
+  background-color: #13C8C6;
+}
+.section.calendar > .inner .calendar-body .month-grid .week .day-wrap.today:not(.enable) .btn {
+  animation: todayAct 1.1s ease-in-out infinite alternate;
+}
+@keyframes test {
+  20% {
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
+  }
+  45% {
+    transform: rotate3d(1, 1, 1, 0deg) scale(1.2);
+  }
+  70% {
+    transform: rotate3d(1, 1, 1, 0deg) scale(1.2);
+  }
+}
+@keyframes todayAct {
+  0% {
+    transform: translateY(0.1rem);
+  }
+  100% {
+    transform: translateY(-0.4rem);
+  }
 }
 .section.calendar > .inner .btn-calendar {
-  margin-top: 2rem;
+  max-width: 33.5rem;
+  margin: 2rem auto 0;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap {
   position: relative;
@@ -661,6 +675,7 @@ input[type=search] {
   position: relative;
   display: flex;
   width: 100%;
+  min-height: 6.6rem;
   padding: 2.1rem 1.4rem;
   color: #A9B7C2;
   background-color: #EFF3F6;
@@ -723,6 +738,19 @@ input[type=search] {
   color: rgba(255, 255, 255, 0.8);
   text-align: right;
 }
+.section.calendar > .inner .btn-calendar .btn-wrap .btn-progress::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.active .btn {
+  pointer-events: auto;
+}
 .section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn .percent {
   background-color: rgba(97, 63, 254, 0.09);
 }
@@ -737,6 +765,19 @@ input[type=search] {
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn-progress .percent {
   background-color: rgba(255, 255, 255, 0.09);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1 .btn-progress::after {
+  background: url("../images/btn_complete_style1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  z-index: -1;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1.active .btn-progress {
+  background-color: transparent;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style1.active .btn-progress::after {
+  opacity: 1;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn .percent {
   background-color: rgba(0, 206, 210, 0.09);
@@ -753,6 +794,19 @@ input[type=search] {
 .section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn-progress .percent {
   background-color: rgba(255, 255, 255, 0.15);
 }
+.section.calendar > .inner .btn-calendar .btn-wrap.style2 .btn-progress::after {
+  background: url("../images/btn_complete_style2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  z-index: -1;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style2.active .btn-progress {
+  background-color: transparent;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style2.active .btn-progress::after {
+  opacity: 1;
+}
 .section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn .percent {
   background-color: rgba(58, 155, 255, 0.09);
 }
@@ -767,6 +821,12 @@ input[type=search] {
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn-progress .percent {
   background-color: rgba(255, 255, 255, 0.12);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style3.active .btn-progress {
+  background-color: transparent;
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style3.active .btn-progress::after {
+  opacity: 1;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap + .btn-wrap {
   margin-top: 0.8rem;
@@ -826,12 +886,8 @@ input[type=search] {
   background-size: 100%;
   transform: translateY(-45%);
 }
-.section.calendar > .inner .calendar-progress .segment.h-complete {
-  --h-percent: 0%;
-}
 .section.calendar > .inner .calendar-progress .segment.h-complete > .progress-wrap .inner::after {
   background-color: #613FFE;
-  clip-path: polygon(0 0, var(--h-percent) 0%, var(--h-percent) 100%, 0% 100%);
 }
 .section.calendar > .inner .calendar-progress .segment.h-complete .percent {
   color: #613FFE;
@@ -840,12 +896,8 @@ input[type=search] {
   left: var(--h-percent);
   background-image: url("../images/badge-h.png");
 }
-.section.calendar > .inner .calendar-progress .segment.attend-complete {
-  --a-percent: 0%;
-}
 .section.calendar > .inner .calendar-progress .segment.attend-complete > .progress-wrap .inner::after {
   background-color: #00D257;
-  clip-path: polygon(0 0, var(--a-percent) 0%, var(--a-percent) 100%, 0% 100%);
 }
 .section.calendar > .inner .calendar-progress .segment.attend-complete .percent {
   color: #00D257;
@@ -918,6 +970,9 @@ input[type=search] {
   background-color: #fff;
   border-radius: 2.4rem;
 }
+.section.rewards > .inner .point-area + .sorting-btn-wrap {
+  margin-top: 3.2rem;
+}
 .section.rewards > .inner .rewards-btn {
   display: inline-block;
   background-color: #F5F5F5;
@@ -972,9 +1027,6 @@ input[type=search] {
   font-variant-numeric: tabular-nums; /* 표준 방식 */
   font-family: "HGGGothic", monospace; /* 또는 monospace */
   display: inline-block;
-}
-.section.rewards > .inner .sorting-btn-wrap {
-  margin-top: 3.2rem;
 }
 .section.rewards > .inner .sorting-btn-wrap .sorting-btn-list {
   display: flex;

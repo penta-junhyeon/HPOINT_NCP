@@ -42,19 +42,6 @@
                 opacity: 0;
                 transition: .5s ease-in-out;
             }
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url('../images/kv_object.png');
-                background-size: cover;
-                transform: var(--scale);
-                transition: .5s ease-in-out;
-                opacity: 0;
-            }
         }
         &.act {
             >.inner {
@@ -103,11 +90,11 @@
                     display: flex;
                     justify-content: center;
                     .weekday {
-                        flex-shrink: 0;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 4.8rem;
+                        max-width: 4.8rem;
+                        width: 100%;
                         height: 4.8rem;
                         font-family: "Pretendard", sans-serif;
                         font-size: 1.2rem;
@@ -120,9 +107,11 @@
                         display: flex;
                         justify-content: center;
                         .day-wrap {
-                            width: 4.8rem;
-                            min-height: 7.2rem;
+                            max-width: 4.6rem;
+                            width: 100%;
+                            min-height: 7rem;
                             padding: .4rem 0;
+                            margin: 0.1rem;
                             text-align: center;
                             .day {
                                 display: inline-block;
@@ -148,7 +137,13 @@
                             }
                             &.enable .btn {
                                 background-image: url('../images/icon_H_enable.png');
-                                transform: rotate3d(0, 1, 0, 180deg);
+                                transition: .3s ease-in-out;
+                                animation: test2 .3s ease-in-out;
+                                @keyframes test2 {
+                                    100% {
+                                        transform: rotate3d(0, 1, 0, 180deg);
+                                    }
+                                }
                             }
                             &[class*='h-'] {
                                 .btn {
@@ -161,26 +156,26 @@
                                     .btn {
                                         animation: bounceGift .4s ease-in forwards;
                                     }
-                                    &.red .btn {
-                                        background-image: url('../images/icon_gift_red.png');
-                                    }
-                                    &.orange .btn {
-                                        background-image: url('../images/icon_gift_orange.png');
-                                    }
-                                    &.yellow .btn {
-                                        background-image: url('../images/icon_gift_yellow.png');
-                                    }
-                                    &.green .btn {
+                                    &.color1 .btn {
                                         background-image: url('../images/icon_gift_green.png');
                                     }
-                                    &.skyblue .btn {
+                                    &.color2 .btn {
+                                        background-image: url('../images/icon_gift_pink.png');
+                                    }
+                                    &.color3 .btn {
+                                        background-image: url('../images/icon_gift_yellow.png');
+                                    }
+                                    &.color4 .btn {
+                                        background-image: url('../images/icon_gift_pink2.png');
+                                    }
+                                    &.color5 .btn {
                                         background-image: url('../images/icon_gift_skyblue.png');
                                     }
-                                    &.blue .btn {
+                                    &.color6 .btn {
                                         background-image: url('../images/icon_gift_blue.png');
                                     }
-                                    &.purple .btn {
-                                        background-image: url('../images/icon_gift_purple.png');
+                                    &.color7 .btn {
+                                        background-image: url('../images/icon_gift_blue2.png');
                                     }
                                 }
                                 @keyframes bounceGift {
@@ -198,30 +193,10 @@
                                     }
                                 }
                             }
-                            &.h-top {
-                                background-color: #EFF3F6;
-                                border-top: .1rem solid #4E2BF4;
-                                border-left: .1rem solid #4E2BF4;
-                                border-right: .1rem solid #4E2BF4;
-                                border-top-left-radius: .8rem;
-                                border-top-right-radius: .8rem;
-                            }
-                            &.h-center {
+                            &.h-day {
                                 background-color: #EFF3F6;
                                 border: .1rem solid #4E2BF4;
-                            }
-                            &.h-deadCenter {
-                                background-color: #EFF3F6;
-                                border-top: .1rem solid #4E2BF4;
-                                border-bottom: .1rem solid #4E2BF4;
-                            }
-                            &.h-bot {
-                                background-color: #EFF3F6;
-                                border-bottom: .1rem solid #4E2BF4;
-                                border-left: .1rem solid #4E2BF4;
-                                border-right: .1rem solid #4E2BF4;
-                                border-bottom-left-radius: .8rem;
-                                border-bottom-right-radius: .8rem;
+                                border-radius: .8rem;
                             }
                             &.prev-month,
                             &.next-month {
@@ -235,7 +210,44 @@
                                 .day {
                                     font-weight: 700;
                                     color: #fff;
-                                    background-color: #4E2BF4;
+                                    background-color: #13C8C6;
+                                }
+                                &:not(.enable) {
+                                    .btn {
+                                        animation: todayAct 1.1s ease-in-out infinite alternate;
+                                        @keyframes test {
+                                            20% {
+                                                transform: rotate3d(1,1,1,0deg) scale(1);
+                                            }
+                                            45% {
+                                                transform: rotate3d(1,1,1,0deg) scale(1.2);
+                                            }
+                                            // 50% {
+                                            //     transform: rotate3d(1,1,1,-10deg) scale(1.2);
+                                            // }
+                                            // 55% {
+                                            //     transform: rotate3d(1,1,1,10deg) scale(1.2);
+                                            // }
+                                            // 60% {
+                                            //     transform: rotate3d(1,1,1,-10deg) scale(1.2);
+                                            // }
+                                            // 65% {
+                                            //     transform: rotate3d(1,1,1,10deg) scale(1.2);
+                                            // }
+                                            70% {
+                                                transform: rotate3d(1,1,1,0deg) scale(1.2);
+                                            }
+                                        }
+                                        @keyframes todayAct {
+                                            0% {
+                                                transform: translateY(0.1rem);
+                                            }
+                                            100% {
+                                                transform: translateY(-0.4rem);
+                                                // background-image: url('../images/icon_H_enable.png');
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -243,7 +255,8 @@
                 }
             }
             .btn-calendar {
-                margin-top: 2rem;
+                max-width: 33.5rem;
+                margin: 2rem auto 0;
                 .btn-wrap {
                     position: relative;
                     border-radius: .8rem;
@@ -268,6 +281,7 @@
                         position: relative;
                         display: flex;
                         width: 100%;
+                        min-height: 6.6rem;
                         padding: 2.1rem 1.4rem;
                         color: #A9B7C2;
                         background-color: #EFF3F6;
@@ -329,6 +343,21 @@
                                 text-align: right;
                             }
                         }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+                            pointer-events: none;
+                        }
+                    }
+                    &.active {
+                        .btn {
+                            pointer-events: auto;
+                        }
                     }
                     &.style1 {
                         .btn {
@@ -346,6 +375,21 @@
                             background-color: #4E2BF4;
                             .percent {
                                 background-color: rgba(255, 255, 255, 0.09);
+                            }
+                            &::after {
+                                background: url("../images/btn_complete_style1.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                opacity: 0;
+                                z-index: -1;
+                            }
+                        }
+                        &.active {
+                            .btn-progress {
+                                background-color: transparent;
+                                &::after {
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
@@ -366,24 +410,47 @@
                             .percent {
                                 background-color: rgba(255, 255, 255, 0.15);
                             }
+                            &::after {
+                                background: url("../images/btn_complete_style2.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                opacity: 0;
+                                z-index: -1;
+                            }
+                        }
+                        &.active {
+                            .btn-progress {
+                                background-color: transparent;
+                                &::after {
+                                    opacity: 1;
+                                }
+                            }
                         }
                     }
                     &.style3 {
                         .btn {
                             .percent {
-                                background-color: rgba(58, 155, 255, 0.09); // 밝은 하늘색 배경
+                                background-color: rgba(58, 155, 255, 0.09);
                                 .num {
-                                    color: rgba(58, 155, 255, 0.70); // 중간 밝기
+                                    color: rgba(58, 155, 255, 0.70);
                                 }
                                 &::before {
-                                    background-color: #3A9BFF; // 메인 블루
+                                    background-color: #3A9BFF;
                                 }
                             }
                         }
                         .btn-progress {
-                            background-color: #2F89E5; // 살짝 더 어두운 블루
+                            background-color: #2F89E5;
                             .percent {
-                                background-color: rgba(255, 255, 255, 0.12); // 공통 흐림
+                                background-color: rgba(255, 255, 255, 0.12);
+                            }
+                        }
+                        &.active {
+                            .btn-progress {
+                                background-color: transparent;
+                                &::after {
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
@@ -452,10 +519,8 @@
                         }
                     }
                     &.h-complete {
-                        --h-percent: 0%;
                         >.progress-wrap .inner::after {
                             background-color: #613FFE;
-                            clip-path: polygon(0 0, var(--h-percent) 0%, var(--h-percent) 100%, 0% 100%);
                         }
                         .percent {
                             color: #613FFE;
@@ -468,10 +533,8 @@
                         }
                     }
                     &.attend-complete {
-                        --a-percent: 0%;
                         >.progress-wrap .inner::after {
                             background-color: #00D257;
-                            clip-path: polygon(0 0, var(--a-percent) 0%, var(--a-percent) 100%, 0% 100%);
                         }
                         .percent {
                             color: #00D257;
@@ -554,6 +617,11 @@
             padding: 4rem 2rem;
             background-color: #fff;
             border-radius: 2.4rem;
+            .point-area {
+                +.sorting-btn-wrap {
+                    margin-top: 3.2rem;
+                }
+            }
             .rewards-btn {
                 display: inline-block;
                 background-color: #F5F5F5;
@@ -610,7 +678,6 @@
                 }
             }
             .sorting-btn-wrap {
-                margin-top: 3.2rem;
                 .sorting-btn-list {
                     display: flex;
                     align-items: center;
