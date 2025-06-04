@@ -933,19 +933,26 @@ input[type=search] {
   opacity: 1;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn .percent {
-  background-color: rgba(58, 155, 255, 0.09);
+  background-color: rgba(245, 104, 186, 0.09);
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn .percent .num {
-  color: rgba(58, 155, 255, 0.7);
+  color: rgba(245, 104, 186, 0.7);
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn .percent::before {
-  background-color: #3A9BFF;
+  background-color: #F568BA;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn-progress {
-  background-color: #2F89E5;
+  background-color: #F568BA;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn-progress .percent {
   background-color: rgba(255, 255, 255, 0.12);
+}
+.section.calendar > .inner .btn-calendar .btn-wrap.style3 .btn-progress::after {
+  background: url("../images/btn_complete_style3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  z-index: -1;
 }
 .section.calendar > .inner .btn-calendar .btn-wrap.style3.active .btn-progress {
   background-color: transparent;

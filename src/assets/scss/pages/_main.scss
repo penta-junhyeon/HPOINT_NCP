@@ -533,19 +533,26 @@
                     &.style3 {
                         .btn {
                             .percent {
-                                background-color: rgba(58, 155, 255, 0.09);
+                                background-color: rgba(245, 104, 186, 0.09);
                                 .num {
-                                    color: rgba(58, 155, 255, 0.70);
+                                    color: rgba(245, 104, 186, 0.7);
                                 }
                                 &::before {
-                                    background-color: #3A9BFF;
+                                    background-color: #F568BA;
                                 }
                             }
                         }
                         .btn-progress {
-                            background-color: #2F89E5;
+                            background-color: #F568BA;
                             .percent {
                                 background-color: rgba(255, 255, 255, 0.12);
+                            }
+                            &::after {
+                                background: url("../images/btn_complete_style3.png");
+                                background-repeat: no-repeat;
+                                background-size: 100% 100%;
+                                opacity: 0;
+                                z-index: -1;
                             }
                         }
                         &.active {
