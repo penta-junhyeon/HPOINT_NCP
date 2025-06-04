@@ -7,14 +7,16 @@
     <div class="wrap">
         <section class="section kv">
             <div class="inner">
-                <p class="kv-text">H.LIGHT DAY<br>캘린더 출석체크하고 혜택 쿠폰 받자!</p>
-                <img src="../assets/images/kv_typo.svg" alt="H LIGHT DAY 하이라이트 데이" class="kv-typo"> 
+                <h1>
+                    <p class="kv-text">H.LIGHT DAY<br>캘린더 출석체크하고 혜택 쿠폰 받자!</p>
+                    <img src="../assets/images/kv_typo.svg" alt="H LIGHT DAY 하이라이트 데이" class="kv-typo"> 
+                </h1>
             </div>
         </section>
         <section class="section calendar">
             <div class="inner">
                 <div class="calendar-head">
-                    <span class="month">7월</span>
+                    <span class="month"><span>7</span>월</span>
                     <p class="calendar-text">'H'를 완성하면 특별한 혜택이!</p>
                 </div>
                 <div class="calendar-body">
@@ -28,13 +30,14 @@
                         <span class="weekday">S</span>
                     </div>
                     <div class="month-grid">
-                        <!-- 캘린더 영역 -->
-                        <!-- 출석체크 활성화: .day-wrap 요소에 enable 클래스 추가(구현필요) -->
+                        <!-- [PUB] 캘린더 영역, 함수 calendar()를 통해 캘린더 생성 -->
+                        <!-- [PUB] 각 .day-wrap 요소 클릭 시 enable 클래스 추가하며 출석체크 활성화-->
+                        <!-- [DEV] 각 .btn 요소 클릭 시 해당 버튼에 알맞는 모달 창 노출,  -->
                     </div>
                 </div>
                 <div class="btn-calendar">
                     <div class="btn-wrap style1 h-complete">
-                        <button type='button' class="btn">
+                        <button type='button' class="btn" data-bs-toggle="modal" data-bs-target="#modal2">
                             <span class="percent">
                                 <span class="num"></span>
                             </span>
@@ -48,7 +51,7 @@
                         </div>
                     </div>
                     <div class="btn-wrap style2 attend-complete">
-                        <button type="button" class="btn">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal5">
                             <span class="percent">
                                 <span class="num"></span>
                             </span>
@@ -240,10 +243,10 @@
   </div>
 </div>
 
-<!-- ※ 모달 내에 이미지 최대 width 값 280px, height 값 189px 고정 / 권장 사이즈: 280x189 px -->
+<!-- [DEV] 모달 내에 이미지 최대 width 값 280px, height 값 189px 고정 / 권장 사이즈: 280x189 px -->
 
 <!-- 플러스포인트 당첨 모달 -->
-<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-head">
@@ -277,10 +280,10 @@
         </div>
       </div>
     </div>
-</div> -->
+</div>
 
 <!-- H.Point 당첨 모달 -->
-<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-head">
@@ -310,14 +313,14 @@
             </div>
         </div>
         <div class="btn-wrap">
-          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">보상 받기</span></button>
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal2" aria-label="Close"><span class="btn-text">보상 받기</span></button>
         </div>
       </div>
     </div>
 </div>
 
 <!-- H 미완성 모달 -->
-<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-head">
@@ -330,14 +333,14 @@
             </div>
         </div>
         <div class="btn-wrap">
-          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal3" aria-label="Close"><span class="btn-text">확인</span></button>
         </div>
       </div>
     </div>
-</div> -->
+</div>
 
 <!-- 출석 완료 모달 -->
-<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-head">
@@ -367,14 +370,51 @@
             </div>
         </div>
         <div class="btn-wrap">
-          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">보상 받기</span></button>
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal4" aria-label="Close"><span class="btn-text">보상 받기</span></button>
         </div>
       </div>
     </div>
-</div> -->
+</div>
+
+<!-- 미션 완료 모달 -->
+<div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-head">
+            <em class="title">축하합니다!</em>
+            <p class="desc">이번달 출석 미션에 성공하셨어요<br>완출 기념 혜택을 받아가세요</p>
+        </div>
+        <div class="modal-body">
+            <div class="img-wrap">
+                <img src="../assets/images/modal_img5.jpg" alt="H.Point 20% 할인 쿠폰 증정">
+                <p class="desc">H.Point 20% 할인 쿠폰 증정</p>
+            </div>
+            <div class="notice-wrap">
+                <ul class="bullet-list">
+                    <li>
+                        <p class="bullet-text">본 쿠폰은 10만원 이상 구매 시, 사용 가능합니다.</p>
+                    </li>
+                    <li>
+                        <p class="bullet-text">지급된 혜택은 선물하기/전환/캐시백 등은 불가합니다.</p>
+                    </li>
+                    <li>
+                        <p class="bullet-text">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</p>
+                    </li>
+                    <li>
+                        <p class="bullet-text">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal5" aria-label="Close"><span class="btn-text">보상 받기</span></button>
+        </div>
+      </div>
+    </div>
+</div>
 
 <!-- 출석 완출 미션 실패 모달 -->
-<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+<div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-head">
@@ -387,14 +427,14 @@
             </div>
         </div>
         <div class="btn-wrap">
-          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal6" aria-label="Close"><span class="btn-text">확인</span></button>
         </div>
       </div>
     </div>
-</div> -->
+</div>
 
 <!-- 중복 참여 모달 -->
-<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+<div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-head">
@@ -407,14 +447,14 @@
             </div>
         </div>
         <div class="btn-wrap">
-          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal7" aria-label="Close"><span class="btn-text">확인</span></button>
         </div>
       </div>
     </div>
-</div> -->
+</div>
 
 <!-- 출석 체크 완료 모달 -->
-<!-- <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+<div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-head">
@@ -427,9 +467,9 @@
             </div>
         </div>
         <div class="btn-wrap">
-          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">확인</span></button>
+          <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal8" aria-label="Close"><span class="btn-text">확인</span></button>
         </div>
       </div>
     </div>
-</div> -->
+</div>
 </html>
