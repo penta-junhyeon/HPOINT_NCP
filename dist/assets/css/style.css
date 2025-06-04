@@ -399,6 +399,7 @@ input[type=search] {
 }
 .toast .toast-body {
   display: flex;
+  align-items: center;
   gap: 1.2rem;
   padding: 0;
   padding-top: 0.8rem;
