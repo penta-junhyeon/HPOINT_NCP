@@ -557,6 +557,8 @@ input[type=search] {
   margin: 0 auto;
   margin-bottom: 1.2rem;
   background-image: url("../images/icon_H_disable.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   transition: 0.3s ease;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.enable .btn {
