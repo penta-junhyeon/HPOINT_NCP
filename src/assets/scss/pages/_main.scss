@@ -142,8 +142,8 @@
                             &.enable .btn {
                                 background-image: url('../images/icon_H_enable.png');
                                 transition: .3s ease-in-out;
-                                animation: test2 .3s ease-in-out;
-                                @keyframes test2 {
+                                animation: flip .3s ease-in-out;
+                                @keyframes flip {
                                     100% {
                                         transform: rotate3d(0, 1, 0, 180deg);
                                     }
@@ -240,6 +240,106 @@
                                         }
                                     }
                                 }
+                                &.today:not(.enable) {
+                                    &.color1 {
+                                        .btn {
+                                            animation: todayHDayAct1 1.1s ease-in-out infinite alternate;
+                                            @keyframes todayHDayAct1 {
+                                                0% {
+                                                    transform: translateY(0.1rem);
+                                                }
+                                                100% {
+                                                    transform: translateY(-0.4rem);
+                                                    background-image: url(../images/icon_gift_green.png);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.color2 {
+                                        .btn {
+                                            animation: todayHDayAct2 1.1s ease-in-out infinite alternate;
+                                            @keyframes todayHDayAct2 {
+                                                0% {
+                                                    transform: translateY(0.1rem);
+                                                }
+                                                100% {
+                                                    transform: translateY(-0.4rem);
+                                                    background-image: url(../images/icon_gift_pink.png);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.color3 {
+                                        .btn {
+                                            animation: todayHDayAct3 1.1s ease-in-out infinite alternate;
+                                            @keyframes todayHDayAct3 {
+                                                0% {
+                                                    transform: translateY(0.1rem);
+                                                }
+                                                100% {
+                                                    transform: translateY(-0.4rem);
+                                                    background-image: url(../images/icon_gift_yellow.png);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.color4 {
+                                        .btn {
+                                            animation: todayHDayAct4 1.1s ease-in-out infinite alternate;
+                                            @keyframes todayHDayAct4 {
+                                                0% {
+                                                    transform: translateY(0.1rem);
+                                                }
+                                                100% {
+                                                    transform: translateY(-0.4rem);
+                                                    background-image: url(../images/icon_gift_pink2.png);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.color5 {
+                                        .btn {
+                                            animation: todayHDayAct5 1.1s ease-in-out infinite alternate;
+                                            @keyframes todayHDayAct5 {
+                                                0% {
+                                                    transform: translateY(0.1rem);
+                                                }
+                                                100% {
+                                                    transform: translateY(-0.4rem);
+                                                    background-image: url(../images/icon_gift_skyblue.png);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.color6 {
+                                        .btn {
+                                            animation: todayHDayAct6 1.1s ease-in-out infinite alternate;
+                                            @keyframes todayHDayAct6 {
+                                                0% {
+                                                    transform: translateY(0.1rem);
+                                                }
+                                                100% {
+                                                    transform: translateY(-0.4rem);
+                                                    background-image: url(../images/icon_gift_blue.png);
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.color7 {
+                                        .btn {
+                                            animation: todayHDayAct7 1.1s ease-in-out infinite alternate;
+                                            @keyframes todayHDayAct7 {
+                                                0% {
+                                                    transform: translateY(0.1rem);
+                                                }
+                                                100% {
+                                                    transform: translateY(-0.4rem);
+                                                    background-image: url(../images/icon_gift_purple.png);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 @keyframes bounceGift {
                                     0% {
                                         transform: scale(1, 1);
@@ -267,6 +367,18 @@
                                 .day {
                                     color: rgba(0, 0, 0, 0.60);
                                 }
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 3.2rem;
+                                    height: 3.2rem;
+                                    margin: 0 auto;
+                                    margin-bottom: 1.2rem;
+                                    background-image: url(../images/icon_H_disable.png);
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                }
                             }
                             &.today {
                                 .day {
@@ -274,42 +386,15 @@
                                     color: #fff;
                                     background-color: #13C8C6;
                                 }
-                                .btn {
-                                    // background-image: url("../images/icon_H_today.png");
-                                }
                                 &:not(.enable) {
                                     .btn {
                                         animation: todayAct 1.1s ease-in-out infinite alternate;
-                                        @keyframes test {
-                                            20% {
-                                                transform: rotate3d(1,1,1,0deg) scale(1);
-                                            }
-                                            45% {
-                                                transform: rotate3d(1,1,1,0deg) scale(1.2);
-                                            }
-                                            // 50% {
-                                            //     transform: rotate3d(1,1,1,-10deg) scale(1.2);
-                                            // }
-                                            // 55% {
-                                            //     transform: rotate3d(1,1,1,10deg) scale(1.2);
-                                            // }
-                                            // 60% {
-                                            //     transform: rotate3d(1,1,1,-10deg) scale(1.2);
-                                            // }
-                                            // 65% {
-                                            //     transform: rotate3d(1,1,1,10deg) scale(1.2);
-                                            // }
-                                            70% {
-                                                transform: rotate3d(1,1,1,0deg) scale(1.2);
-                                            }
-                                        }
                                         @keyframes todayAct {
                                             0% {
                                                 transform: translateY(0.1rem);
                                             }
                                             100% {
                                                 transform: translateY(-0.4rem);
-                                                
                                                 background-image: url(../images/icon_H_enable.png);
                                             }
                                         }
