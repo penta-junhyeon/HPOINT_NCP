@@ -665,7 +665,7 @@ input[type=search] {
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.h-day {
   background-color: #EFF3F6;
-  border: 0.1rem solid #4E2BF4;
+  border: 0.1rem solid #b6a8f9;
   border-radius: 0.8rem;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.prev-month, .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.next-month {
