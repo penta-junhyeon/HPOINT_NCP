@@ -563,7 +563,7 @@ input[type=search] {
   transition: 0.3s ease;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.enable .btn {
-  background-image: url("../images/icon_H_enable.svg");
+  background-image: url("../images/icon_H_enable.png");
   transition: 0.3s ease-in-out;
   animation: test2 0.3s ease-in-out;
 }
@@ -579,7 +579,7 @@ input[type=search] {
   width: 4.1rem;
   height: 4.4rem;
   margin-bottom: 0;
-  background-image: url("../images/icon_gift_disable.svg");
+  background-image: url("../images/icon_gift_disable.png");
   background-repeat: no-repeat;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-]::after {
@@ -599,53 +599,53 @@ input[type=search] {
   background-size: contain;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color1 .btn {
-  background-image: url("../images/icon_gift_green.svg");
+  background-image: url("../images/icon_gift_green.png");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color1::after {
-  background-image: url(../images/h_complete_objects_green.svg);
+  background-image: url(../images/h_complete_objects_green.png);
   transform-origin: bottom right;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color2 .btn {
-  background-image: url("../images/icon_gift_pink.svg");
+  background-image: url("../images/icon_gift_pink.png");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color2::after {
-  background-image: url(../images/h_complete_objects_pink.svg);
+  background-image: url(../images/h_complete_objects_pink.png);
   transform-origin: bottom left;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color3 .btn {
-  background-image: url("../images/icon_gift_yellow.svg");
+  background-image: url("../images/icon_gift_yellow.png");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color3::after {
-  background-image: url(../images/h_complete_objects_yellow.svg);
+  background-image: url(../images/h_complete_objects_yellow.png);
   transform-origin: center right;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color4 .btn {
-  background-image: url("../images/icon_gift_pink2.svg");
+  background-image: url("../images/icon_gift_pink2.png");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color4::after {
-  background-image: url(../images/h_complete_objects_pink2.svg);
+  background-image: url(../images/h_complete_objects_pink2.png);
   transform-origin: center center;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color5 .btn {
-  background-image: url("../images/icon_gift_skyblue.svg");
+  background-image: url("../images/icon_gift_skyblue.png");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color5::after {
-  background-image: url(../images/h_complete_objects_skyblue.svg);
+  background-image: url(../images/h_complete_objects_skyblue.png);
   transform-origin: center left;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color6 .btn {
-  background-image: url("../images/icon_gift_blue.svg");
+  background-image: url("../images/icon_gift_blue.png");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color6::after {
-  background-image: url(../images/h_complete_objects_blue.svg);
+  background-image: url(../images/h_complete_objects_blue.png);
   background-size: contain;
   transform-origin: top right;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color7 .btn {
-  background-image: url("../images/icon_gift_purple.svg");
+  background-image: url("../images/icon_gift_purple.png");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color7::after {
-  background-image: url(../images/h_complete_objects_purple.svg);
+  background-image: url(../images/h_complete_objects_purple.png);
   transform-origin: top left;
 }
 @keyframes bounceGift {
@@ -1058,7 +1058,7 @@ input[type=search] {
 }
 .section.noti > .inner .input-noti input[type=checkbox]:checked + label:after {
   left: calc(100% - 3.9rem);
-  background-image: url("../images/icon_checkbox_enable.svg");
+  background-image: url("../images/icon_checkbox_enable.png");
 }
 .section.noti > .inner .input-noti label {
   position: relative;
@@ -1077,7 +1077,7 @@ input[type=search] {
   left: 0.2rem;
   width: 3.6rem;
   height: 3.6rem;
-  background-image: url("../images/icon_checkbox_disable.svg");
+  background-image: url("../images/icon_checkbox_disable.png");
   background-size: 100%;
   transition: 0.3s ease;
 }
@@ -1110,7 +1110,7 @@ input[type=search] {
   width: 3.2rem;
   height: 3.2rem;
   margin-right: 0.6rem;
-  background-image: url("../images/icon_H_object.svg");
+  background-image: url("../images/icon_H_object.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;

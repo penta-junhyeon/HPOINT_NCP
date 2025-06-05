@@ -140,7 +140,7 @@
                                 transition: .3s ease;
                             }
                             &.enable .btn {
-                                background-image: url('../images/icon_H_enable.svg');
+                                background-image: url('../images/icon_H_enable.png');
                                 transition: .3s ease-in-out;
                                 animation: test2 .3s ease-in-out;
                                 @keyframes test2 {
@@ -155,7 +155,7 @@
                                     width: 4.1rem;
                                     height: 4.4rem;
                                     margin-bottom: 0;
-                                    background-image: url('../images/icon_gift_disable.svg');
+                                    background-image: url('../images/icon_gift_disable.png');
                                     background-repeat: no-repeat;
                                 }
                                 &::after {
@@ -177,65 +177,65 @@
                                     }
                                     &.color1 { 
                                         .btn {
-                                            background-image: url('../images/icon_gift_green.svg');
+                                            background-image: url('../images/icon_gift_green.png');
                                         }
                                         &::after {
-                                            background-image: url(../images/h_complete_objects_green.svg);
+                                            background-image: url(../images/h_complete_objects_green.png);
                                             transform-origin: bottom right;
                                         }
                                     }
                                     &.color2 {
                                         .btn {
-                                            background-image: url('../images/icon_gift_pink.svg');
+                                            background-image: url('../images/icon_gift_pink.png');
                                         }
                                         &::after {
-                                            background-image: url(../images/h_complete_objects_pink.svg);
+                                            background-image: url(../images/h_complete_objects_pink.png);
                                             transform-origin: bottom left;
                                         }
                                     }
                                     &.color3 {
                                         .btn {
-                                            background-image: url('../images/icon_gift_yellow.svg');
+                                            background-image: url('../images/icon_gift_yellow.png');
                                         }
                                         &::after {
-                                            background-image: url(../images/h_complete_objects_yellow.svg);
+                                            background-image: url(../images/h_complete_objects_yellow.png);
                                             transform-origin: center right;
                                         }
                                     }
                                     &.color4 {
                                         .btn {
-                                            background-image: url('../images/icon_gift_pink2.svg');
+                                            background-image: url('../images/icon_gift_pink2.png');
                                         }
                                         &::after {
-                                            background-image: url(../images/h_complete_objects_pink2.svg);
+                                            background-image: url(../images/h_complete_objects_pink2.png);
                                             transform-origin: center center;
                                         }
                                     }
                                     &.color5 {
                                         .btn {
-                                            background-image: url('../images/icon_gift_skyblue.svg');
+                                            background-image: url('../images/icon_gift_skyblue.png');
                                         }
                                         &::after {
-                                            background-image: url(../images/h_complete_objects_skyblue.svg);
+                                            background-image: url(../images/h_complete_objects_skyblue.png);
                                             transform-origin: center left;
                                         }
                                     }
                                     &.color6 {
                                         .btn {
-                                            background-image: url('../images/icon_gift_blue.svg');
+                                            background-image: url('../images/icon_gift_blue.png');
                                         }
                                         &::after {
-                                            background-image: url(../images/h_complete_objects_blue.svg);
+                                            background-image: url(../images/h_complete_objects_blue.png);
                                             background-size: contain;
                                             transform-origin: top right;
                                         }
                                     }
                                     &.color7 {
                                         .btn {
-                                            background-image: url('../images/icon_gift_purple.svg');
+                                            background-image: url('../images/icon_gift_purple.png');
                                         }
                                         &::after {
-                                            background-image: url(../images/h_complete_objects_purple.svg);
+                                            background-image: url(../images/h_complete_objects_purple.png);
                                             transform-origin: top left;
                                         }
                                     }
@@ -669,7 +669,7 @@
                     visibility: hidden;
                     &:checked + label:after {
                         left: calc(100% - 3.9rem);
-                        background-image: url('../images/icon_checkbox_enable.svg');
+                        background-image: url('../images/icon_checkbox_enable.png');
                     }
                 }
 
@@ -689,7 +689,7 @@
                         left: .2rem;
                         width: 3.6rem;
                         height: 3.6rem;
-                        background-image: url('../images/icon_checkbox_disable.svg');
+                        background-image: url('../images/icon_checkbox_disable.png');
                         background-size: 100%;
                         transition: 0.3s ease;
                     }
@@ -724,7 +724,7 @@
                         width: 3.2rem;
                         height: 3.2rem;
                         margin-right: .6rem;
-                        background-image: url("../images/icon_H_object.svg");
+                        background-image: url("../images/icon_H_object.png");
                         background-size: 100%;
                         background-repeat: no-repeat;
                         background-position: center;
