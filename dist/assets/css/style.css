@@ -680,9 +680,6 @@ input[type=search] {
   color: #fff;
   background-color: #13C8C6;
 }
-.section.calendar > .inner .calendar-body .month-grid .week .day-wrap.today .btn {
-  background-image: url("../images/icon_H_today.png");
-}
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.today:not(.enable) .btn {
   animation: todayAct 1.1s ease-in-out infinite alternate;
 }
