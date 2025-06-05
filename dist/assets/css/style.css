@@ -1058,7 +1058,7 @@ input[type=search] {
   visibility: hidden;
 }
 .section.noti > .inner .input-noti input[type=checkbox]:checked + label:after {
-  left: calc(100% - 3.9rem);
+  left: calc(100% - 3.8rem);
   background-image: url("../images/icon_checkbox_enable.png");
 }
 .section.noti > .inner .input-noti label {

@@ -668,7 +668,7 @@
                     width: 0;
                     visibility: hidden;
                     &:checked + label:after {
-                        left: calc(100% - 3.9rem);
+                        left: calc(100% - 3.8rem);
                         background-image: url('../images/icon_checkbox_enable.png');
                     }
                 }
