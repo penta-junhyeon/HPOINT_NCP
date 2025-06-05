@@ -374,7 +374,7 @@ input[type=search] {
   position: fixed;
   left: 50%;
   bottom: -1rem;
-  max-width: 31.9rem;
+  max-width: 35.1rem;
   background-color: #fff;
   border: 0.2rem solid #613FFE;
   border-radius: 1.2rem;
@@ -416,7 +416,7 @@ input[type=search] {
   display: block;
   width: 3.6rem;
   height: 3.6rem;
-  background-image: url("../images/icon_checkbox_enable.svg");
+  background-image: url("../images/icon_toast_img.svg");
 }
 .toast:not(.show) {
   display: block;
@@ -556,12 +556,12 @@ input[type=search] {
   height: 3.2rem;
   margin: 0 auto;
   margin-bottom: 1.2rem;
-  background-image: url("../images/icon_H_disable.png");
+  background-image: url("../images/icon_H_disable.svg");
   background-size: 100%;
   transition: 0.3s ease;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.enable .btn {
-  background-image: url("../images/icon_H_enable.png");
+  background-image: url("../images/icon_H_enable.svg");
   transition: 0.3s ease-in-out;
   animation: test2 0.3s ease-in-out;
 }
@@ -577,7 +577,8 @@ input[type=search] {
   width: 4.1rem;
   height: 4.4rem;
   margin-bottom: 0;
-  background-image: url("../images/icon_gift_disable.png");
+  background-image: url("../images/icon_gift_disable.svg");
+  background-repeat: no-repeat;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-]::after {
   content: "";
@@ -587,7 +588,7 @@ input[type=search] {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   transform: scale(0);
   z-index: 1;
 }
@@ -595,52 +596,53 @@ input[type=search] {
   animation: bounceGift 0.4s ease-in forwards;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color1 .btn {
-  background-image: url("../images/icon_gift_green.png");
+  background-image: url("../images/icon_gift_green.svg");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color1::after {
-  background-image: url(../images/h_complete_objects_green.png);
+  background-image: url(../images/h_complete_objects_green.svg);
   transform-origin: bottom right;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color2 .btn {
-  background-image: url("../images/icon_gift_pink.png");
+  background-image: url("../images/icon_gift_pink.svg");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color2::after {
-  background-image: url(../images/h_complete_objects_pink.png);
+  background-image: url(../images/h_complete_objects_pink.svg);
   transform-origin: bottom left;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color3 .btn {
-  background-image: url("../images/icon_gift_yellow.png");
+  background-image: url("../images/icon_gift_yellow.svg");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color3::after {
-  background-image: url(../images/h_complete_objects_yellow.png);
+  background-image: url(../images/h_complete_objects_yellow.svg);
   transform-origin: center right;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color4 .btn {
-  background-image: url("../images/icon_gift_pink2.png");
+  background-image: url("../images/icon_gift_pink2.svg");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color4::after {
-  background-image: url(../images/h_complete_objects_pink2.png);
+  background-image: url(../images/h_complete_objects_pink2.svg);
   transform-origin: center center;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color5 .btn {
-  background-image: url("../images/icon_gift_skyblue.png");
+  background-image: url("../images/icon_gift_skyblue.svg");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color5::after {
-  background-image: url(../images/h_complete_objects_skyblue.png);
+  background-image: url(../images/h_complete_objects_skyblue.svg);
   transform-origin: center left;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color6 .btn {
-  background-image: url("../images/icon_gift_blue.png");
+  background-image: url("../images/icon_gift_blue.svg");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color6::after {
-  background-image: url(../images/h_complete_objects_blue.png);
+  background-image: url(../images/h_complete_objects_blue.svg);
+  background-size: contain;
   transform-origin: top right;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color7 .btn {
-  background-image: url("../images/icon_gift_purple.png");
+  background-image: url("../images/icon_gift_purple.svg");
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color7::after {
-  background-image: url(../images/h_complete_objects_purple.png);
+  background-image: url(../images/h_complete_objects_purple.svg);
   transform-origin: top left;
 }
 @keyframes bounceGift {
@@ -1020,26 +1022,6 @@ input[type=search] {
   background-size: 100%;
   transform: translateY(-45%);
 }
-.section.calendar > .inner .calendar-progress .segment.h-complete > .progress-wrap .inner::after {
-  background-color: #613FFE;
-}
-.section.calendar > .inner .calendar-progress .segment.h-complete .percent {
-  color: #613FFE;
-}
-.section.calendar > .inner .calendar-progress .segment.h-complete .badge::after {
-  left: var(--h-percent);
-  background-image: url("../images/badge-h.png");
-}
-.section.calendar > .inner .calendar-progress .segment.attend-complete > .progress-wrap .inner::after {
-  background-color: #00D257;
-}
-.section.calendar > .inner .calendar-progress .segment.attend-complete .percent {
-  color: #00D257;
-}
-.section.calendar > .inner .calendar-progress .segment.attend-complete .badge::after {
-  left: var(--a-percent);
-  background-image: url("../images/badge-a.png");
-}
 .section.calendar > .inner .calendar-progress .segment + .segment {
   margin-top: 1.2rem;
 }
@@ -1124,7 +1106,7 @@ input[type=search] {
   width: 3.2rem;
   height: 3.2rem;
   margin-right: 0.6rem;
-  background-image: url("../images/icon_H_object.png");
+  background-image: url("../images/icon_H_object.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
