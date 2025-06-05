@@ -700,6 +700,7 @@ input[type=search] {
   }
   100% {
     transform: translateY(-0.4rem);
+    background-image: url(../images/icon_H_enable.png);
   }
 }
 .section.calendar > .inner .calendar-body .month-grid.h-complete .week .day-wrap.h-day {
