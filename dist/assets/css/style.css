@@ -416,7 +416,8 @@ input[type=search] {
   display: block;
   width: 3.6rem;
   height: 3.6rem;
-  background-image: url("../images/icon_toast_img.svg");
+  background-image: url("../images/icon_toast_img.png");
+  background-size: 100%;
 }
 .toast:not(.show) {
   display: block;
