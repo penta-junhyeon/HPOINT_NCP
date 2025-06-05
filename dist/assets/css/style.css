@@ -578,6 +578,7 @@ input[type=search] {
   height: 4.4rem;
   margin-bottom: 0;
   background-image: url("../images/icon_gift_disable.svg");
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-]::after {
