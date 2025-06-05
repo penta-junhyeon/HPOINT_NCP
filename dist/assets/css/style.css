@@ -557,7 +557,6 @@ input[type=search] {
   margin: 0 auto;
   margin-bottom: 1.2rem;
   background-image: url("../images/icon_H_disable.svg");
-  background-size: 100%;
   transition: 0.3s ease;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap.enable .btn {
@@ -578,7 +577,6 @@ input[type=search] {
   height: 4.4rem;
   margin-bottom: 0;
   background-image: url("../images/icon_gift_disable.svg");
-  background-size: 100%;
   background-repeat: no-repeat;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-]::after {
@@ -595,6 +593,7 @@ input[type=search] {
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable .btn {
   animation: bounceGift 0.4s ease-in forwards;
+  background-size: contain;
 }
 .section.calendar > .inner .calendar-body .month-grid .week .day-wrap[class*=h-].enable.color1 .btn {
   background-image: url("../images/icon_gift_green.svg");
@@ -1076,6 +1075,7 @@ input[type=search] {
   width: 3.6rem;
   height: 3.6rem;
   background-image: url("../images/icon_checkbox_disable.svg");
+  background-size: 100%;
   transition: 0.3s ease;
 }
 .section.rewards {
