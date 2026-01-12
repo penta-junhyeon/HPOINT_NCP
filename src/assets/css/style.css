@@ -13,6 +13,14 @@
   -webkit-tap-highlight-color: transparent !important;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
 }
+*::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: transparent;
+  border-radius: 0.6rem;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+}
 
 *:before,
 *:after {
@@ -25,11 +33,14 @@ html {
 
 body {
   font-size: 1rem;
+  max-width: 76.8rem;
+  background-color: #0C0C0C;
+  margin: 0 auto;
 }
 
 html,
 body {
-  font-family: "NotoSansKR", sans-serif;
+  font-family: "Pretendard", sans-serif;
   letter-spacing: 0;
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
@@ -89,6 +100,17 @@ button:focus:not(:focus-visible) {
   outline: 0;
 }
 
+.btn {
+  border: none;
+}
+
+ol,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 label,
 img,
 input,
@@ -102,7 +124,6 @@ a {
 img {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 input,
@@ -121,4 +142,485 @@ sub {
 
 input[type=search] {
   padding-right: 0;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+.footer .inner {
+  padding: 2.4rem 2rem;
+}
+.footer .inner .tit {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #e0e0e0;
+}
+.footer .inner .tit ~ .notice_list {
+  padding-top: 1rem;
+}
+.footer .inner .notice_list li {
+  position: relative;
+  padding-left: 0.8rem;
+}
+.footer .inner .notice_list li .notice_txt {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 130%;
+  color: #bbb;
+}
+.footer .inner .notice_list li + li {
+  padding-top: 1rem;
+}
+.footer .inner .notice_list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0.3rem;
+  height: 0.3rem;
+  margin: 0.7rem 0;
+  background-color: #bbb;
+  border-radius: 100%;
+}
+
+/* font-family:"Gmarket Sans" */
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/GmarketSans/GmarketSansLight.otf") format("opentype"), url("../fonts/GmarketSans/GmarketSansTTFLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/GmarketSans/GmarketSansMedium.otf") format("opentype"), url("../fonts/GmarketSans/GmarketSansTTFMedium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gmarket Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/GmarketSans/GmarketSansBold.otf") format("opentype"), url("../fonts/GmarketSans/GmarketSansTTFBold.ttf") format("truetype");
+  font-display: swap;
+}
+/* font-family:"Asul"*/
+@font-face {
+  font-family: "Asul";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Asul/Asul-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Asul";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Asul/Asul-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+/* font-family:"Pretendard"*/
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-Thin.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Thin.woff") format("woff"), url("../fonts/Pretendard/Pretendard-Thin.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-Thin.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-Thin.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-ExtraLight.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-ExtraLight.woff") format("woff"), url("../fonts/Pretendard/Pretendard-ExtraLight.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-ExtraLight.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-ExtraLight.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-Light.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Light.woff") format("woff"), url("../fonts/Pretendard/Pretendard-Light.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-Light.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-Light.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-Regular.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Regular.woff") format("woff"), url("../fonts/Pretendard/Pretendard-Regular.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-Regular.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-Regular.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-Medium.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Medium.woff") format("woff"), url("../fonts/Pretendard/Pretendard-Medium.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-Medium.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-Medium.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-SemiBold.woff") format("woff"), url("../fonts/Pretendard/Pretendard-SemiBold.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-SemiBold.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-SemiBold.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-Bold.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Bold.woff") format("woff"), url("../fonts/Pretendard/Pretendard-Bold.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-Bold.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-Bold.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-ExtraBold.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-ExtraBold.woff") format("woff"), url("../fonts/Pretendard/Pretendard-ExtraBold.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-ExtraBold.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-ExtraBold.svg") format("svg");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/Pretendard/Pretendard-Black.woff2") format("woff2"), url("../fonts/Pretendard/Pretendard-Black.woff") format("woff"), url("../fonts/Pretendard/Pretendard-Black.otf") format("opentype"), url("../fonts/Pretendard/Pretendard-Black.ttf") format("truetype"), url("../fonts/Pretendard/Pretendard-Black.svg") format("svg");
+  font-display: swap;
+}
+* {
+  font-family: "Pretendard", sans-serif;
+}
+
+.section .section_head {
+  text-align: center;
+}
+.section .section_head .tit {
+  font-family: "Gmarket Sans";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.1rem;
+  color: #fff;
+}
+.section .section_head .tit ~ .date {
+  padding-top: 1.6rem;
+}
+.section .section_head .subtit {
+  padding-top: 0.2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.section .section_head .date {
+  display: inline-block;
+  font-family: "Asul";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #fff;
+  opacity: 0.8;
+}
+.section .section_head .note {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #999;
+}
+.section.pre_regi .inner {
+  padding: 5rem 2rem 3rem;
+}
+.section.pre_regi .inner .section_head ~ .section_body {
+  margin-top: 3rem;
+}
+.section.pre_regi .inner .section_body .content {
+  padding: 3rem 2rem 2rem;
+  background-color: #222;
+  border-radius: 0.4rem;
+}
+.section.pre_regi .inner .section_body .content .content_head {
+  text-align: center;
+}
+.section.pre_regi .inner .section_body .content .content_head .cate {
+  font-family: "Asul";
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #5ED99B;
+}
+.section.pre_regi .inner .section_body .content .content_head .cate ~ .tit {
+  padding-top: 0.8rem;
+}
+.section.pre_regi .inner .section_body .content .content_head .cate ~ .txt {
+  padding-top: 1rem;
+}
+.section.pre_regi .inner .section_body .content .content_head .tit {
+  font-family: "Gmarket Sans";
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #fff;
+}
+.section.pre_regi .inner .section_body .content .content_head .tit ~ .txt {
+  padding-top: 1rem;
+}
+.section.pre_regi .inner .section_body .content .content_head .txt {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+}
+.section.pre_regi .inner .section_body .content .content_head .txt .accent {
+  font-weight: 700;
+  color: #5ED99B;
+}
+.section.pre_regi .inner .section_body .content .content_head ~ .content_body {
+  padding-top: 4rem;
+}
+.section.pre_regi .inner .section_body .content .content_head ~ .content_foot {
+  padding-top: 2rem;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.6rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.4rem;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li .list_wrap {
+  display: flex;
+  align-items: center;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li .list_wrap .rank {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: #fff;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li .list_wrap .point {
+  padding: 0 1.2rem 0 1.6rem;
+  font-family: "Asul";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #fff;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li .list_wrap .tag {
+  padding: 0.4rem 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 100%;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9.9rem;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li + li {
+  margin-top: 0.4rem;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li:nth-child(1) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li:nth-child(1)::after {
+  content: "";
+  display: flex;
+  width: 3.4rem;
+  aspect-ratio: 1/1;
+  background-image: url("../images/event1_rank_gold.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li:nth-child(1) .list_wrap .rank,
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li:nth-child(1) .list_wrap .point {
+  color: #5ED99B;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li:nth-child(1) .list_wrap .tag {
+  font-weight: 700;
+  color: #333;
+  background-color: #5ED99B;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li:nth-child(2)::after {
+  content: "";
+  display: flex;
+  width: 3.4rem;
+  aspect-ratio: 1/1;
+  background-image: url("../images/event1_rank_silver.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body .list > li:nth-child(3)::after {
+  content: "";
+  display: flex;
+  width: 3.4rem;
+  aspect-ratio: 1/1;
+  background-image: url("../images/event1_rank_bronze.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_body ~ .content_foot {
+  padding-top: 2rem;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_foot {
+  text-align: center;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_foot .txt {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: #fff;
+}
+.section.pre_regi .inner .section_body .content.event1 .content_foot .note {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #999;
+}
+.section.pre_regi .inner .section_body .content.event2 {
+  padding-bottom: 3.2rem;
+}
+.section.pre_regi .inner .section_body .content.event2 .content_body {
+  width: 27.4rem;
+  height: 26rem;
+}
+.section.pre_regi .inner .section_body .content + .content {
+  margin-top: 2rem;
+}
+.section.invite {
+  padding: 5rem 2rem;
+  background-color: #222;
+}
+.section.invite .section_head ~ .section_body {
+  margin-top: 4rem;
+}
+.section.invite .section_body {
+  text-align: center;
+}
+.section.invite .section_body .content.point-reward .btn {
+  padding: 1.5rem 2rem;
+  background-color: #5ED99B;
+  border-radius: 0.4rem;
+}
+.section.invite .section_body .content.point-reward .btn .btn_txt {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #0c0c0c;
+}
+.section.invite .section_body .content.my-point .content_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.8rem;
+  padding-left: 1.6rem;
+  text-align: left;
+}
+.section.invite .section_body .content.my-point .content_head .tit {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+}
+.section.invite .section_body .content.my-point .content_head .tit .point {
+  display: inline-block;
+  font-family: "Asul";
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+.section.invite .section_body .content.my-point .content_head::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 100%;
+  background-image: url("../images/invite_mypoint_coin.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: -0.7rem;
+}
+.section.invite .section_body .content.my-point .content_head ~ .content_body {
+  margin-top: 2rem;
+}
+.section.invite .section_body .content.my-point .content_body {
+  padding: 1.6rem;
+  background-color: #2d2d2d;
+  border-radius: 0.4rem;
+}
+.section.invite .section_body .content.my-point .content_body .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section.invite .section_body .content.my-point .content_body .item .tit {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+}
+.section.invite .section_body .content.my-point .content_body .item .txt {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #fff;
+}
+.section.invite .section_body .content.my-point .content_body .item.friend .tit::before {
+  content: "";
+  width: 2.2rem;
+  height: 2.3rem;
+  display: inline-block;
+  margin-right: 0.8rem;
+  background-image: url("../images/invite_mypoint_friend.svg");
+  background-repeat: no-repeat;
+}
+.section.invite .section_body .content.my-point .content_body .item.point-box .tit::before {
+  content: "";
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.3rem;
+  margin-right: 0.8rem;
+  background-image: url("../images/invite_mypoint_point-box.svg");
+  background-repeat: no-repeat;
+}
+.section.invite .section_body .content.my-point .content_body .item.point-box .txt {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.section.invite .section_body .content.my-point .content_body .item.point-box .txt .btn {
+  padding: 0.4rem 0.6rem;
+  background-color: #5ED99B;
+  border-radius: 0.2rem;
+}
+.section.invite .section_body .content.my-point .content_body .item.point-box .txt .btn .btn_txt {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: #0c0c0c;
+}
+.section.invite .section_body .content.my-point .content_body .item + .item {
+  margin-top: 2rem;
+}
+.section.invite .section_body .content + .content {
+  margin-top: 4rem;
+}
+.section.welcome .inner {
+  padding-top: 5rem;
+}
+.section.welcome .section_head {
+  padding: 0 2rem;
+}
+.section.welcome .section_head .note {
+  padding-top: 0.2rem;
 }

@@ -1,32 +1,42 @@
-/* font-family:"HGGGothic" */
+/* font-family:"Gmarket Sans" */
 @font-face {
-    font-family:"HGGGothic";
+    font-family:"Gmarket Sans";
     font-weight:400;
     font-style:normal;
-    src:url('../fonts/HGGGothicssi/HGGGothicssi-40g.woff2') format('woff2'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-40g.woff') format('woff'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-40g.otf') format('opentype'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-40g.ttf') format("truetype");
+    src:url('../fonts/GmarketSans/GmarketSansLight.otf') format('opentype'),
+        url('../fonts/GmarketSans/GmarketSansTTFLight.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family:"HGGGothic";
+    font-family:"Gmarket Sans";
     font-weight:600;
     font-style:normal;
-    src:url('../fonts/HGGGothicssi/HGGGothicssi-60g.woff2') format('woff2'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-60g.woff') format('woff'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-60g.otf') format('opentype'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-60g.ttf') format("truetype");
+    src:url('../fonts/GmarketSans/GmarketSansMedium.otf') format('opentype'),
+        url('../fonts/GmarketSans/GmarketSansTTFMedium.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family:"HGGGothic";
-    font-weight:800;
+    font-family:"Gmarket Sans";
+    font-weight:700;
     font-style:normal;
-    src:url('../fonts/HGGGothicssi/HGGGothicssi-80g.woff2') format('woff2'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-80g.woff') format('woff'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-80g.otf') format('opentype'),
-        url('../fonts/HGGGothicssi/HGGGothicssi-80g.ttf') format("truetype");
+    src:url('../fonts/GmarketSans/GmarketSansBold.otf') format('opentype'),
+        url('../fonts/GmarketSans/GmarketSansTTFBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+/* font-family:"Asul"*/
+@font-face {
+    font-family:"Asul";
+    font-weight:400;
+    font-style:normal;
+    src:url('../fonts/Asul/Asul-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family:"Asul";
+    font-weight:700;
+    font-style:normal;
+    src:url('../fonts/Asul/Asul-Bold.ttf') format("truetype");
     font-display: swap;
 }
 
@@ -132,5 +142,5 @@
     font-display: swap;
 }
 * {
-    font-family: "HGGGothic", sans-serif;
+    font-family: "Pretendard", sans-serif;
 }

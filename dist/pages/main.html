@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>HPOINT 캘린더 이벤트</title>
+    <title>더현대 온라인 사전 신청</title>
 
     <!-- Swiper -->
     <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
@@ -24,447 +24,190 @@
 <body>
     <div class="wrap">
         <section class="section kv">
-            <div class="inner">
-                <h1>
-                    <p class="kv-text">H.LIGHT DAY<br>캘린더 출석체크하고 혜택 쿠폰 받자!</p>
-                    <img src="../assets/images/kv_typo.svg" alt="H LIGHT DAY 하이라이트 데이" class="kv-typo">
-                </h1>
-            </div>
         </section>
-        <section class="section calendar">
+        <section class="section pre_regi">
             <div class="inner">
-                <div class="calendar-head">
-                    <span class="month">7월</span>
-                    <p class="calendar-text">'H'를 완성하면 특별한 혜택이!</p>
+                <div class="section_head">
+                    <h2 class="tit">
+                        NEW 오픈 축하 기념!
+                        <p class="subtit">2억원 상당 포인트가 쏟아진다!</p>
+                    </h2>
+                    <span class="date">2.23 ~ 3.22</span>
                 </div>
-                <div class="calendar-body">
-                    <div class="weekdays-wrap">
-                        <span class="weekday">S</span>
-                        <span class="weekday">M</span>
-                        <span class="weekday">T</span>
-                        <span class="weekday">W</span>
-                        <span class="weekday">T</span>
-                        <span class="weekday">F</span>
-                        <span class="weekday">S</span>
-                    </div>
-                    <div class="month-grid">
-                        <!-- [PUB] 캘린더 영역, 함수 calendar()를 통해 캘린더 생성 -->
-                        <!-- [PUB] 각 .day-wrap 요소 클릭 시 enable 클래스 추가하며 출석체크 활성화 유도 -->
-                        <!-- [PUB] 각 .btn 요소 클릭 시 해당 버튼에 임의에 모달 창 노출 (단, 임의로 모달 창 매칭된 상태이므로 모달 변경이 필요하면 openModalByDate()를 통해 수정가능) -->
-                    </div>
-                </div>
-                <div class="btn-calendar">
-                    <div class="btn-wrap style1 h-complete">
-                        <button type='button' class="btn" data-bs-toggle="modal" data-bs-target="#modal2">
-                            <span class="percent">
-                                <span class="num"></span>
-                            </span>
-                            <em class="btn-text">H 완성 보상 받기</em>
-                        </button>
-                        <div class="btn-progress">
-                            <em class="btn-text">H 완성 보상 받기</em>
-                            <span class="percent">
-                                <span class="num"></span>
-                            </span>
+                <div class="section_body">
+                    <div class="content event1">
+                        <div class="content_head">
+                            <span class="cate">Event 1</span>
+                            <h3 class="tit">경품 EVENT</h3>
+                            <p class="txt">
+                                사전 알림 신청하면 경품 응모 완료!<br>
+                                추첨을 통해 <span class="accent">2만 분께 쇼핑 지원금</span>을 드립니다.
+                            </p>
+                        </div>
+                        <div class="content_body">
+                            <ol class="list">
+                                <li>
+                                    <div class="list_wrap">
+                                        <span class="rank">1</span>
+                                        <p class="point">10,000,000 P</p>
+                                        <span class="tag">1명</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_wrap">
+                                        <span class="rank">2</span>
+                                        <p class="point">1,000,000 P</p>
+                                        <span class="tag">10명</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_wrap">
+                                        <span class="rank">3</span>
+                                        <p class="point">50,000 P</p>
+                                        <span class="tag">100명</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_wrap">
+                                        <span class="rank">4</span>
+                                        <p class="point">10,000 P</p>
+                                        <span class="tag">5,000명</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_wrap">
+                                        <span class="rank">5</span>
+                                        <p class="point">5,000 P</p>
+                                        <span class="tag">150,000명</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="content_foot">
+                            <p class="txt">당첨자 발표: 2026.3.31(화) 예정</p>
+                            <span class="note">※ PUSH/LMS 동의 유지 필수!</span>
                         </div>
                     </div>
-                    <div class="btn-wrap style2 attend-complete">
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal5">
-                            <span class="percent">
-                                <span class="num"></span>
-                            </span>
-                            <em class="btn-text">출첵 보상 받기</em>
-                        </button>
-                        <div class="btn-progress">
-                            <em class="btn-text">출첵 보상 받기</em>
-                            <span class="percent">
-                                <span class="num"></span>
-                            </span>
+                    <div class="content event2">
+                        <div class="content_head">
+                            <span class="cate">Event 2</span>
+                            <h3 class="tit">
+                                100% 당첨!<br>
+                                랜덤 포인트 박스
+                            </h3>
+                            <p class="txt">
+                                사전 알림 신청만 완료해도 즉시 포인트가<br>
+                                적립되는 포인트 박스를 열 수 있어요!
+                            </p>
+                        </div>
+                        <div class="content_body">
+
                         </div>
                     </div>
-                    <div class="btn-wrap style3 mission">
-                        <button type='button' class="btn">
-                            <span class="percent">
-                                <span class="num"></span>
-                            </span>
-                            <em class="btn-text">미션 완료 보상 받기</em>
-                        </button>
-                        <div class="btn-progress">
-                            <em class="btn-text">미션 완료 보상 받기</em>
-                            <span class="percent">
-                                <span class="num"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section noti">
-            <div class="inner">
-                <div class="noti-body">
-                    <em class="noti-title">캘린더 출석 알림 받으세요!</em>
-                    <p class="noti-desc">매일 오전 10:00 ~ 12:00 알림</p>
-                </div>
-                <div class="input-noti">
-                    <!-- [PUB] checkbox가 checked 상태일 때 활성화 유도 -->
-                    <input type="checkbox" id="switch" /><label for="switch">출석 알림 토글 버튼</label>
                 </div>
             </div>
         </section>
-        <section class="section rewards">
+        <section class="section invite">
             <div class="inner">
-                <div class="point-area">
-                    <div class="rewards-btn">
-                        <button class="btn point">
-                            <span class="btn-text">6월 적립 포인트</span>
+                <div class="section_head">
+                    <div class="tit">초대만 해도 추가 포인트
+                        <p class="subtit">
+                            내가 보낸 초대장으로 친구가 신청을<br>
+                            완료할 때마다 랜덤 포인트 박스가 지급돼요!
+                        </p>
+                    </div>
+                </div>
+                <div class="section_body">
+                    <div class="content point-reward">
+                        <button class='btn'>
+                            <p class="btn_txt">
+                                초대장 보내고 랜덤 포인트 받기
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                                    <path d="M4 5L10 11C10 11 5.81818 15.1818 4 17" stroke="black" stroke-width="1.5" />
+                                </svg>
+                            </p>
                         </button>
                     </div>
-                    <em class="cur-point">
-                        <span class="point">0</span> <!-- [PUB] pointCount()로 포인트 변환 -->
-                        <span class="unit">P</span>
-                    </em>
+                    <div class="content my-point">
+                        <div class="content_head">
+                            <em class="tit">
+                                내가 모은 포인트<br>
+                                <span class="point">199,999 P</span>
+                            </em>
+                        </div>
+                        <div class="content_body">
+                            <div class="item friend">
+                                <em class="tit">내가 초대한 친구</em>
+                                <span class="txt">1,999 명</span>
+                            </div>
+                            <div class="item point-box">
+                                <em class="tit">나의 포인트 박스</em>
+                                <span class="txt">
+                                    2개
+                                    <button class="btn">
+                                        <span class="btn_txt">열기</span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="sorting-btn-wrap btn-swiper">
-                    <ul class="sorting-btn-list swiper-wrapper">
-                        <li class="swiper-slide">
-                            <!-- [PUB] 버튼 클릭시 active 클래스 추가 되며 활성화 -->
-                            <!-- [DEV] 각 버튼에 맞는 .rewards-item 소팅 -->
-                            <button class="btn btn-reward active">
-                                <span class="btn-text">받은 혜택</span>
-                            </button>
-                        </li>
-                        <li class="swiper-slide">
-                            <button class="btn btn-reward">
-                                <span class="btn-text">이달의 혜택</span>
-                            </button>
-                        </li>
-                        <li class="swiper-slide">
-                            <button class="btn btn-reward">
-                                <span class="btn-text">지난 혜택</span>
-                            </button>
-                        </li>
-                    </ul>
+            </div>
+        </section>
+        <section class="section welcome">
+            <div class="inner">
+                <div class="section_head">
+                    <div class="tit">
+                        새로워진 지금!<br>
+                        신규 가입 웰컴팩 증정
+                    </div>
+                    <span class="note">* 계정당 최초 1회 한정</span>
                 </div>
-                <div class="rewards-list">
-                    <div class="rewards-item link-reward"> <!-- 바로가기: link-reward 클래스 -->
-                        <div class="date-wrap">
-                            <span class="date">5월 10일</span>
-                        </div>
-                        <div class="img-wrap">
-                            <img src="../assets/images/rewards_sample_img.png" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <span class="caption">클럽프렌즈 4월 혜택</span>
-                            <div class="title-wrap">
-                                <em class="title">
-                                    에버랜드<br>2천 솜포인트
-                                </em>
-                            </div>
-                            <spna class="period">2025.06 .06 - 2025.06.30</spna>
-                        </div>
-                        <div class="status-wrap">
-                            <button class="btn link">
-                                <span class="btn-text">바로가기</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="rewards-item d-day"> <!-- D-day: d-day 클래스 -->
-                        <div class="date-wrap">
-                            <span class="date">3월 8일</span>
-                        </div>
-                        <div class="img-wrap">
-                            <img src="../assets/images/rewards_sample_img.png" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <span class="caption">클럽프렌즈 4월 혜택</span>
-                            <div class="title-wrap">
-                                <em class="title">
-                                    인상파, 모네에서<br>미국으로 : 빛 바다를 건너다 전시 할인권
-                                </em>
-                            </div>
-                            <spna class="period">2025.06.06 - 2025.06.30</spna>
-                        </div>
-                        <div class="status-wrap">
-                            <button class="btn link">
-                                <span class="btn-text">D-day</span>
-                                <span class="status">23</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="rewards-item fin"> <!-- 종료: fin 클래스 -->
-                        <div class="date-wrap">
-                            <span class="date">4월 14일</span>
-                        </div>
-                        <div class="img-wrap">
-                            <img src="../assets/images/rewards_sample_img.png" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <span class="caption">클럽프렌즈 4월 혜택</span>
-                            <div class="title-wrap">
-                                <em class="title">
-                                    현대백화점 전점<br>플러스포인트 1만P
-                                </em>
-                            </div>
-                            <spna class="period">2025.06.06 - 2025.06.30</spna>
-                        </div>
-                        <div class="status-wrap">
-                            <button class="btn link">
-                                <span class="btn-text">Fin</span>
-                                <span class="status">종료</span>
-                            </button>
-                        </div>
-                    </div>
+                <div class="section_body">
+                    <img src="../assets/images/welcome_bg.png" alt="할인 쿠폰 15%, 포인트 적입 최대 5,000P(앱 설치 시 3천+PUSH 동의 시 2천P, 할인권 1만원)">
                 </div>
             </div>
         </section>
     </div>
 </body>
-
-<!-- [PUB] 토스트 팝업 노출 시 toastPopActive() 실행 -->
-<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" inert>
+<footer class='footer'>
     <div class="inner">
-        <div class="toast-head">
-            <em class="toast-title">
-                <span class="user-name">축하합니다!</span> H를 완성하셨네요:)
-            </em>
-        </div>
-        <div class="toast-body">
-            <p class="toast-text">버튼을 눌러 혜택을 받으세요!</p>
-        </div>
+        <em class="tit">이벤트 유의사항</em>
+        <ul class='bullet notice_list'>
+            <li>
+                <p class="notice_txt">
+                    본 이벤트는 진행 기간동안만 참여 가능합니다.<br>
+                    (진행일자: 12월 1일 ~ 24일)
+                </p>
+            </li>
+            <li>
+                <p class="notice_txt">
+                    출석체크는 당일 1일 1회 참여 가능하며, 지난일자의 출석체크는 불가합니다.
+                </p>
+            </li>
+            <li>
+                <p class="notice_txt">
+                    출석일이 많을 수록 1천만P 당첨 확률이 올라갑니다.<br>
+                    (출석일 1일 = 응모권 1개)
+                </p>
+            </li>
+            <li>
+                <p class="notice_txt">
+                    1천만P 당첨은 12월 31일 개별 통보 및 안내 예정입니다.
+                </p>
+            </li>
+            <li>
+                <p class="notice_txt">
+                    행사 내용 및 일정은 내부 사정으로 일부 변경될 수 있습니다.
+                </p>
+            </li>
+            <li>
+                <p class="notice_txt">
+                    혜택 별 자세한 내용은 각 혜택 내 독소조항 참고 바랍니다.
+                </p>
+            </li>
+        </ul>
     </div>
-</div>
-
-
-<!-- [PUB] 모달 내에 이미지 최대 width 값 280px, height 값 189px 고정 / 권장 사이즈: 280x189 px -->
-
-<!-- 플러스포인트 당첨 모달 -->
-<div class="modal fade" id="modal1" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">축하합니다!</em>
-                <p class="desc">H.LIGHT DAY 참여완료</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img1.png" alt="플러스포인트 당첨 이미지">
-                    <p class="desc">플러스포인트 당첨</p>
-                </div>
-                <div class="notice-wrap">
-                    <div class="inner">
-                        <ul class="bullet-list">
-                            <li>
-                                <p class="bullet-text">본 쿠폰은 10만원 이상 구매 시, 사용 가능합니다.</p>
-                            </li>
-                            <li>
-                                <p class="bullet-text">지급된 혜택은 선물하기/전환/캐시백 등은 불가합니다.</p>
-                            </li>
-                            <li>
-                                <p class="bullet-text">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</p>
-                            </li>
-                            <li>
-                                <p class="bullet-text">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal1" aria-label="Close"><span class="btn-text">보상 받기</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- H.Point 당첨 모달 -->
-<div class="modal fade" id="modal2" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal2" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">축하합니다!</em>
-                <p class="desc">이번 달 H를 완성하셨네요<br>하이라이트 혜택을 받아가세요</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img2.png" alt="H.Point 100P 당첨 이미지">
-                    <p class="desc">H.Point 100P 당첨</p>
-                </div>
-                <div class="notice-wrap">
-                    <ul class="bullet-list">
-                        <li>
-                            <p class="bullet-text">본 쿠폰은 10만원 이상 구매 시, 사용 가능합니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">지급된 혜택은 선물하기/전환/캐시백 등은 불가합니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal2" aria-label="Close"><span class="btn-text">보상 받기</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- H 미완성 모달 -->
-<div class="modal fade" id="modal3" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal3" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">아쉬워요</em>
-                <p class="desc">이번 달 H를 완성하지 못했어요<br>다음달 미션을 노려보세요</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img3.png" alt="H 미완성 이미지">
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal3" aria-label="Close"><span class="btn-text">확인</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 출석 완료 모달 -->
-<div class="modal fade" id="modal4" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal4" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">오늘의 출석 완료</em>
-                <p class="desc">혜택이 지급됐어요!</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img4.png" alt="H.Point 30P 당첨 이미지">
-                    <p class="desc">H.Point 30P 당첨</p>
-                </div>
-                <div class="notice-wrap">
-                    <ul class="bullet-list">
-                        <li>
-                            <p class="bullet-text">본 쿠폰은 10만원 이상 구매 시, 사용 가능합니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">지급된 혜택은 선물하기/전환/캐시백 등은 불가합니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal4" aria-label="Close"><span class="btn-text">보상 받기</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 미션 완료 모달 -->
-<div class="modal fade" id="modal5" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal5" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">축하합니다!</em>
-                <p class="desc">이번달 출석 미션에 성공하셨어요<br>완출 기념 혜택을 받아가세요</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img5.png" alt="H.Point 20% 할인 쿠폰 증정">
-                    <p class="desc">H.Point 20% 할인 쿠폰 증정</p>
-                </div>
-                <div class="notice-wrap">
-                    <ul class="bullet-list">
-                        <li>
-                            <p class="bullet-text">본 쿠폰은 10만원 이상 구매 시, 사용 가능합니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">지급된 혜택은 선물하기/전환/캐시백 등은 불가합니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">혜택별 사용처/사용기준이 상이하므로, 사용 전 반드시 확인 바랍니다.</p>
-                        </li>
-                        <li>
-                            <p class="bullet-text">지급된 혜택의 세부 내용은 하단의 혜택받기 버튼을 통해 확인 가능합니다.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal5" aria-label="Close"><span class="btn-text">보상 받기</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 출석 완출 미션 실패 모달 -->
-<div class="modal fade" id="modal6" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal6" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">아쉬워요</em>
-                <p class="desc">이번달 출석 미션을 달성하지 못했어요<br>다음달 미션을 노려보세요</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img6.png" alt="완출 미션 실패 이미지">
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal6" aria-label="Close"><span class="btn-text">확인</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 중복 참여 모달 -->
-<div class="modal fade" id="modal7" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal7" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">오늘 이미 참여하셨어요</em>
-                <p class="desc">내일 또 만나요!</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img7.png" alt="Complete 이미지">
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal7" aria-label="Close"><span class="btn-text">확인</span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 출석 체크 완료 모달 -->
-<div class="modal fade" id="modal8" tabindex="-1" data-bs-backdrop="static" aria-labelledby="modal8" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-head">
-                <em class="title">오늘의 출석 체크 완료!</em>
-                <p class="desc">선물을 가져오고 있어요!<br>잠시만 기다려주세요!</p>
-            </div>
-            <div class="modal-body">
-                <div class="img-wrap">
-                    <img src="../assets/images/modal_img8.png" alt="출석 체크 완료 이미지">
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="close" data-bs-dismiss="modal" data-bs-target="#modal8" aria-label="Close"><span class="btn-text">확인</span></button>
-            </div>
-        </div>
-    </div>
-</div>
+</footer>
 
 </html>
