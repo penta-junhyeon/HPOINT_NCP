@@ -1,4 +1,64 @@
+//글로벌 버튼
+.wrap.g_btn {
+    .global_btn {
+        display: block;
+    }
+}
+.global_btn {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    max-width: 76.8rem;
+    width: 100%;
+    height: 11.8rem;
+    padding: 1.2rem 2rem;
+    background-color: #fff;
+    z-index: 11;
+    .btn {
+        width: 100%;
+        padding: 1.7rem 2rem;
+        background-color: #0c0c0c;
+        border-radius: .4rem;
+        .btn_txt {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 140%;
+            color: #fff;
+        }
+    }
+} 
+// 앵커
+.anchor {
+    position: sticky;
+    top: 0;
+    height: 6rem;
+    background-color: #5ED99B;
+    z-index: 10;
+    .anchor_list {
+        display: flex;
+        text-align: center;
+        >li {
+            width: calc(100%/3);
+            padding: 1.8rem 0;
+            .anchor_txt {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 150%;
+                color: #0C0C0C99;
+                &.active {
+                    font-weight: 700;
+                    color: #0c0c0c;
+                }
+            }
+        }
+    }
+}
 .section {
+    position: relative;
+    .anchor-pin {
+        position: absolute;
+        top: -6rem;
+    }
     .section_head {
         text-align: center;
         .tit {
@@ -208,6 +268,9 @@
                     }
                 }
             }
+            @media (min-width: 768px) {
+                padding: 5rem 0 3rem;
+            }
         }
     }
     &.invite {
@@ -358,6 +421,73 @@
             padding: 0 2rem;
             .note {
                 padding-top: .2rem;
+            }
+        }
+    }
+}
+
+.modal {
+    background-color: #3d3d3d;
+    .modal-dialog {
+        padding: 0 4rem;
+        .modal-content {
+            padding: 3rem 2rem 2rem 2rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            .modal-head {
+                .tit {
+                    display: inline-block;
+                    font-family: 'Gmarket Sans';
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    line-height: 140%;
+                    letter-spacing: -0.018rem;
+                    color: #0c0c0c;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 10rem;
+                        margin-top: 2rem;
+                        background-image: url("../images/modal_noBox.png");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+                ~.modal-body {
+                    margin-top: 2rem;
+                }
+                ~.btn-wrap {
+                    margin-top: 3rem;
+                }
+            }
+            .modal-body {
+                .modal-txt {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 140%;
+                    color: #0c0c0c;
+                }
+                ~.btn-wrap {
+                    margin-top: 3rem;
+                }
+            }
+            .btn-wrap {
+                .btn {
+                    width: 100%;
+                    height: 4.6rem;
+                    padding: 1.3rem 0;
+                    background-color: #0c0c0c;
+                    border-radius: .4rem;
+                    .btn-txt {
+                        display: inline-block;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        line-height: 140%;
+                        color: #fff;
+                    }
+                }
             }
         }
     }

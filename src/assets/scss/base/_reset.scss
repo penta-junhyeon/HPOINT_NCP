@@ -158,3 +158,38 @@ input[type=search] {
     clip-path: inset(50%);
     overflow: hidden;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    z-index: 1072;
+}
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+}
+.fade.show {
+    opacity: 1;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.modal {
+    height: 100%;
+}
+.modal-dialog {
+    justify-content: center;
+    max-width: unset;
+    margin: 0;
+}
+.modal-content {
+    max-width: 50rem;
+}

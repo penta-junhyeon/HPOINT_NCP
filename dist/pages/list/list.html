@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Publishing List</title>
+    <style>
+        /* 기본 스타일 초기화 및 배경 설정 */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --accent: #a29bfe;
+        }
+
+        a {
+            color: #2d3436;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 50px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 섹션 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        .title-area h1 {
+            font-size: 2.2rem;
+            margin: 0;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .title-area p {
+            color: var(--text-sub);
+            margin: 5px 0 0 0;
+        }
+
+        /* 검색 바 스타일 */
+        .search-box {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            width: 200px;
+        }
+
+        /* 리스트 스타일 */
+        .page-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .page-item {
+            background: var(--card-bg);
+            padding: 20px 30px;
+            border-radius: 16px;
+            display: grid;
+            grid-template-columns: 2fr 3fr 1fr 1fr;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .page-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent);
+        }
+
+        /* 각 열의 정보 스타일 */
+        .info-title {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .info-file {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #555;
+            background: #f1f3f9;
+            padding: 6px 12px;
+            border-radius: 8px;
+            word-break: break-all;
+            margin-right: 20px;
+        }
+
+        /* 배지 스타일 */
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .badge.done {
+            background: #e3f9e5;
+            color: #1db446;
+        }
+
+        .badge.ing {
+            background: #fff4e6;
+            color: #fd7e14;
+        }
+
+        .badge.review {
+            background: #e7f5ff;
+            color: #228be6;
+        }
+
+        /* 링크 버튼 스타일 */
+        .link-btn {
+            text-align: right;
+        }
+
+        .link-btn a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .link-btn a:hover {
+            color: #764ba2;
+        }
+
+        /* 라벨 (헤더용) */
+        .list-header {
+            padding: 0 30px 10px;
+            display: grid;
+            grid-template-columns: 2fr 3fr 1fr 1fr;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+
+            .page-item,
+            .list-header {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .list-header {
+                display: none;
+            }
+
+            .link-btn {
+                text-align: left;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="title-area">
+                <h1>HPOINT NCP</h1>
+                <p>프로젝트 진행 현황 및 페이지 리스트</p>
+            </div>
+        </header>
+
+        <div class="list-header">
+            <div>PAGE TITLE</div>
+            <div>FILE PATH</div>
+            <div>STATUS</div>
+            <div style="text-align: right;">LINK</div>
+        </div>
+
+        <div class="page-list">
+            <a href='../mainEventNoBox.html' target='_blank' class="page-item">
+                <div class="info-title">메인페이지<br>(사전 알림 신청 완료)</div>
+                <div><span class="info-file">/pages/mainEventRegi.html</span></div>
+                <div><span class="badge done">Completed</span></div>
+                <div class="link-btn">View Page →</div>
+            </a>
+
+            <a class="page-item">
+                <div class="info-title">사용자 분석 차트</div>
+                <div><span class="info-file">/src/pages/stats/user-chart.html</span></div>
+                <div><span class="badge ing">In Progress</span></div>
+                <div class="link-btn">View Page →</div>
+            </a>
+
+            <a class="page-item">
+                <div class="info-title">회원 가입 양식</div>
+                <div><span class="info-file">/src/pages/auth/signup.html</span></div>
+                <div><span class="badge review">Review</span></div>
+                <div class="link-btn">View Page →</div>
+            </a>
+
+            <a class="page-item">
+                <div class="info-title">결제 내역 목록</div>
+                <div><span class="info-file">/src/pages/order/history.html</span></div>
+                <div><span class="badge done">Completed</span></div>
+                <div class="link-btn">View Page →</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
