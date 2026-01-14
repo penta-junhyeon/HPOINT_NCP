@@ -262,6 +262,43 @@
                 </div>
             </div>
         </div>
+        <!-- 포인트 박스 오프닝-->
+        <div class="overlay box-opening hidden">
+            <div class="overlay-container">
+                <div class="img-wrap">
+                    <img class='img' src="../assets/images/overlay-pointBox-opening.svg" alt=" ">
+                </div>
+                <div class="overlay-content">
+                    <em class="tit">포인트 박스를 여는 중!</em>
+                    <p class="txt">
+                        포인트를 가져오고 있어요.<br>
+                        잠시만 기다려주세요.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 포인트 박스 -->
+        <div class="modal fade" id="pointBox" tabindex="-1" data-bs-backdrop="static" aria-labelledby="pointBox" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-head">
+                        <em class="tit">축하드려요!</em>
+                        <p class="txt">랜덤 박스 포인트를 받았어요.</p>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-txt">
+                            랜덤 포인트 박스가 지급됐어요!
+                        </p>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn close" data-bs-dismiss="modal" data-bs-target="#regiComp" aria-label="닫기"><span class="btn-txt">확인</span></button>
+                        <button type="button" class="btn notice">
+                            <span class="btn-txt">적립된 포인트의 유효기간은 30일 이에요.</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
