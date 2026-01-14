@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/ui.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 </head>
 
 <body>
@@ -281,20 +283,21 @@
         <div class="modal fade" id="pointBox" tabindex="-1" data-bs-backdrop="static" aria-labelledby="pointBox" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
+                    <div class='fanfare'></div>
                     <div class="modal-head">
                         <em class="tit">축하드려요!</em>
                         <p class="txt">랜덤 박스 포인트를 받았어요.</p>
                     </div>
                     <div class="modal-body">
                         <p class="modal-txt">
-                            랜덤 포인트 박스가 지급됐어요!
+                            199,999 <span class="unit">P</span>
                         </p>
                     </div>
                     <div class="btn-wrap">
                         <button type="button" class="btn close" data-bs-dismiss="modal" data-bs-target="#regiComp" aria-label="닫기"><span class="btn-txt">확인</span></button>
-                        <button type="button" class="btn notice">
+                        <a href='javascript:void(0)' class="btn notice">
                             <span class="btn-txt">적립된 포인트의 유효기간은 30일 이에요.</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

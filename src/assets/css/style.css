@@ -853,16 +853,14 @@ input[type=search] {
   letter-spacing: -0.018rem;
   color: #0c0c0c;
 }
-.modal .modal-dialog .modal-content .modal-head .tit::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 10rem;
-  margin-top: 2rem;
-  background-image: url("../images/modal_noBox.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.modal .modal-dialog .modal-content .modal-head .tit ~ .txt {
+  margin-top: 0.4rem;
+}
+.modal .modal-dialog .modal-content .modal-head .txt {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 140%;
+  color: #666;
 }
 .modal .modal-dialog .modal-content .modal-head ~ .modal-body {
   margin-top: 2rem;
@@ -879,19 +877,93 @@ input[type=search] {
 .modal .modal-dialog .modal-content .modal-body ~ .btn-wrap {
   margin-top: 3rem;
 }
-.modal .modal-dialog .modal-content .btn-wrap .btn {
+.modal .modal-dialog .modal-content .btn-wrap .btn.close {
   width: 100%;
   height: 4.6rem;
   padding: 1.3rem 0;
   background-color: #0c0c0c;
   border-radius: 0.4rem;
 }
-.modal .modal-dialog .modal-content .btn-wrap .btn .btn-txt {
+.modal .modal-dialog .modal-content .btn-wrap .btn.close .btn-txt {
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 140%;
   color: #fff;
+}
+.modal .modal-dialog .modal-content .btn-wrap .btn.close ~ .notice {
+  margin-top: 1.2rem;
+}
+.modal .modal-dialog .modal-content .btn-wrap .btn.notice .btn-txt {
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 140%;
+  color: #999;
+}
+.modal .modal-dialog .modal-content .btn-wrap .btn.notice .btn-txt::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #999;
+}
+.modal#regiComp .modal-head .tit::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10rem;
+  margin-top: 2rem;
+  background-image: url("../images/modal_noBox.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.modal#pointBox .modal-content {
+  position: relative;
+}
+.modal#pointBox .modal-content .fanfare {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28rem;
+  height: 28rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 100;
+}
+.modal#pointBox .modal-body {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+.modal#pointBox .modal-body .modal-txt {
+  font-family: "Asul";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #000;
+}
+.modal#pointBox .modal-body .modal-txt .unit {
+  font-size: 2.8rem;
+  line-height: 100%;
+}
+.modal#pointBox .modal-body::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10rem;
+  margin-top: 0.8rem;
+  background-image: url("../images/modal_point_get.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.modal#pointBox.show .modal-body {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .overlay {

@@ -545,17 +545,15 @@
                     line-height: 140%;
                     letter-spacing: -0.018rem;
                     color: #0c0c0c;
-                    &::after {
-                        content: '';
-                        display: block;
-                        width: 100%;
-                        height: 10rem;
-                        margin-top: 2rem;
-                        background-image: url("../images/modal_noBox.png");
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position: center;
+                    ~.txt {
+                        margin-top: .4rem;
                     }
+                }
+                .txt {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 140%;
+                    color: #666;
                 }
                 ~.modal-body {
                     margin-top: 2rem;
@@ -577,19 +575,107 @@
             }
             .btn-wrap {
                 .btn {
-                    width: 100%;
-                    height: 4.6rem;
-                    padding: 1.3rem 0;
-                    background-color: #0c0c0c;
-                    border-radius: .4rem;
-                    .btn-txt {
-                        display: inline-block;
-                        font-size: 1.4rem;
-                        font-weight: 700;
-                        line-height: 140%;
-                        color: #fff;
+                    &.close {
+                        width: 100%;
+                        height: 4.6rem;
+                        padding: 1.3rem 0;
+                        background-color: #0c0c0c;
+                        border-radius: .4rem;
+                        .btn-txt {
+                            display: inline-block;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            line-height: 140%;
+                            color: #fff;
+                        }
+                        ~.notice {
+                            margin-top: 1.2rem;
+                        }
+                    }
+                    &.notice {
+                        .btn-txt {
+                            position: relative;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            line-height: 140%;
+                            color: #999;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                height: .1rem;
+                                background-color: #999;
+                            }
+                        }
                     }
                 }
+            }
+        }
+    }
+    &#regiComp {
+        .modal-head {
+            .tit {
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 10rem;
+                    margin-top: 2rem;
+                    background-image: url("../images/modal_noBox.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+        }
+    }
+    &#pointBox {
+        .modal-content {
+            position: relative;
+            .fanfare {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 28rem;
+                height: 28rem;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                z-index: 100;
+            }
+        }
+        .modal-body {
+            transform: scale(0.8);
+            opacity: 0;
+            transition: .4s ease;
+            .modal-txt {
+                font-family: 'Asul';
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 130%;
+                color: #000;
+                .unit {
+                    font-size: 2.8rem;
+                    line-height: 100%;
+                }
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 10rem;
+                margin-top: .8rem;
+                background-image: url("../images/modal_point_get.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+        &.show {
+            .modal-body {
+                transform: scale(1);
+                opacity: 1;
             }
         }
     }
