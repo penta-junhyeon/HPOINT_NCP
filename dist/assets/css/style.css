@@ -881,7 +881,7 @@ body.stop {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 150%;
-  color: #32b589;
+  color: #019865;
 }
 .modal .modal-dialog .modal-content .modal-head .subtit ~ .tit {
   margin-top: 0.4rem;
@@ -930,7 +930,8 @@ body.stop {
   border-radius: 0.4rem;
 }
 .modal .modal-dialog .modal-content .mat-txt .accent {
-  color: #32B589;
+  font-weight: 700;
+  color: #019865;
 }
 .modal .modal-dialog .modal-content .btn-wrap .btn.close {
   width: 100%;
@@ -1298,6 +1299,7 @@ body.stop {
   display: flex;
   padding-left: 2.6rem;
   gap: 2rem;
+  margin-bottom: 0.8rem;
 }
 .overlay.agree .overlay-container .overlay-body .sublist .sublist-txt {
   display: inline-block;

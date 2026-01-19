@@ -557,7 +557,7 @@ body.stop {
                     font-size: 1.4rem;
                     font-weight: 700;
                     line-height: 150%;
-                    color: #32b589;
+                    color: #019865;
                     ~.tit {
                         margin-top: .4rem;
                     }
@@ -608,7 +608,8 @@ body.stop {
                 background-color: #edf9f3;
                 border-radius: .4rem;
                 .accent {
-                    color: #32B589;
+                    font-weight: 700;
+                    color: #019865;
                 }
             }
             .btn-wrap {
@@ -1005,6 +1006,7 @@ body.stop {
                     display: flex;
                     padding-left: 2.6rem;
                     gap: 2rem;
+                    margin-bottom: .8rem;
                     .sublist-txt {
                         display: inline-block;
                         font-size: 1.5rem;
