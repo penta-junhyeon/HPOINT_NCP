@@ -1140,6 +1140,9 @@ body.stop {
 .modal#notWinning .modal-txt {
   font-size: 1.4rem;
 }
+.modal#end {
+  background-color: #333;
+}
 
 .overlay {
   position: fixed;
