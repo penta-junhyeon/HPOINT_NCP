@@ -115,210 +115,176 @@ body.stop {
             color: #999;
         }
     }
-    &.pre-regi {
-        .inner {
-            .content {
-                padding: 0 2rem;
-                border-radius: .4rem;
-                .content-head {
-                    text-align: center;
-                    .cate {
-                        font-family: 'Asul';
-                        font-size: 1.4rem;
-                        font-weight: 700;
-                        line-height: 150%;
-                        color: #5ED99B;
-                        ~.tit {
-                            padding-top: .8rem;
-                        }
-                        ~.txt {
-                            padding-top: 1rem;
-                        }
-                    }
-                    .tit {
-                        font-family: "Gmarket Sans";
-                        font-size: 2.4rem;
-                        font-weight: 700;
-                        line-height: 130%;
-                        color: #fff;
-                        ~.txt {
-                            padding-top: 1rem;
-                        }
-                    }
-                    .txt {
-                        font-size: 1.6rem;
-                        font-weight: 500;
-                        line-height: 150%;
-                        color: #fff;
-                        .accent {
-                            font-weight: 700;
-                            color: #5ED99B;
-                        }
-                    }
-                    ~.content-body {
-                        padding-top: 4rem;
-                    }
-                    ~.content-foot {
-                        padding-top: 2rem;
-                    }
+    &.kv {
+        padding-bottom: 2rem;
+        [class*="kv-obj"] {
+            position: absolute;
+            aspect-ratio: 1/1;
+            background-size: contain;
+            background-position: center;
+        }
+        .kv-img {
+            position: relative;
+            pointer-events: none;
+            .kv-obj {
+                display: inline-block;
+                will-change: transform;
+                &1 {
+                    width: 10.67%;
+                    top: 49.1%;
+                    left: 5.07%;
+                    background-image: url("../images/obj-kv1.png");
+                    animation: diamond-idle 4.5s linear infinite;
+                    animation-delay: -2.3s;
                 }
-                &.event1 {
-                    .content-body {
-                        .list {
-                            >li {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                padding: 1.1rem 1.6rem;
-                                background-color: rgba(255, 255, 255, 0.05);
-                                border-radius: .4rem;
-                                .list-wrap {
-                                    display: flex;
-                                    align-items: center;
-                                    .rank {
-                                        font-size: 1.8rem;
-                                        font-weight: 700;
-                                        line-height: 100%;
-                                        color: #fff;
-                                    }
-                                    .point {
-                                        padding: 0 1.2rem 0 1.6rem;
-                                        font-family: 'Asul';
-                                        font-size: 1.6rem;
-                                        font-weight: 400;
-                                        line-height: 150%;
-                                        color: #fff;
-                                    }
-                                    .tag {
-                                        padding: .4rem .6rem;
-                                        font-size: 1.2rem;
-                                        font-weight: 500;
-                                        line-height: 100%;
-                                        color: #fff;
-                                        background-color: rgba(255, 255, 255, 0.10);
-                                        border-radius: 9.9rem;
-                                    }
-                                }
-                                +li {
-                                    margin-top: .4rem;
-                                }
-                                &:nth-child(1) {
-                                    background-color: rgba(255, 255, 255, 0.2);
-                                    &::after {
-                                        content: '';
-                                        display: flex;
-                                        width: 3.4rem;
-                                        aspect-ratio: 1/1;
-                                        background-image: url("../images/event1_rank_gold.svg");
-                                        background-position: center;
-                                        background-repeat: no-repeat;
-                                    }
-                                    .list-wrap {
-                                        .rank,
-                                        .point {
-                                            color: #5ED99B;
-                                        }
-                                        .tag {
-                                            font-weight: 700;
-                                            color: #333;
-                                            background-color: #5ED99B;
-                                        }
-                                    }
-                                }
-                                &:nth-child(2) {
-                                    &::after {
-                                        content: '';
-                                        display: flex;
-                                        width: 3.4rem;
-                                        aspect-ratio: 1/1;
-                                        background-image: url("../images/event1_rank_silver.svg");
-                                        background-position: center;
-                                        background-repeat: no-repeat;
-                                    }
-                                }
-                                &:nth-child(3) {
-                                    &::after {
-                                        content: '';
-                                        display: flex;
-                                        width: 3.4rem;
-                                        aspect-ratio: 1/1;
-                                        background-image: url("../images/event1_rank_bronze.svg");
-                                        background-position: center;
-                                        background-repeat: no-repeat;
-                                    }
-                                }
-                            }
-                        }
-                        ~.content-foot {
-                            padding-top: 2rem;
-                        }
+                @keyframes diamond-idle {
+                    0% {
+                      transform: translate(0, 0) rotate(0deg);
                     }
-                    .content-foot {
-                        text-align: center;
-                        .txt {
-                            font-size: 1.4rem;
-                            font-weight: 600;
-                            line-height: 150%;
-                            color: #fff;
-                        }
-                        .note {
-                            font-size: 1.3rem;
-                            font-weight: 400;
-                            line-height: 150%;
-                            color: #999;
-                        }
+                    25% {
+                      transform: translate(3px, -5px) rotate(2deg);
                     }
+                    50% {
+                      transform: translate(0, -10px) rotate(0deg);
+                    }
+                    75% {
+                      transform: translate(-3px, -5px) rotate(-2deg);
+                    }
+                    100% {
+                      transform: translate(0, 0) rotate(0deg);
+                    }
+                  }
+                &2 {
+                    width: 16.71%;
+                    top: 27.58%;
+                    right: 7.024%;
+                    background-image: url("../images/obj-kv2.png");
+                    animation: star-idle 2.5s ease-in-out infinite;
+                    animation-delay: -1.1s;
                 }
-                &.event2 {
-                    padding-bottom: 3rem;
-                    .content-body {
-                        .content-wrap {
-                            position: relative;
-                            top: -2.2rem;
-                            padding: 1rem 1.6rem;
-                            background-color: #3a3a3a;
-                            border-radius: 9.9rem;
-                            .content-txt {
-                                font-family: "Gmarket Sans";
-                                font-size: 1.4rem;
-                                font-weight: 400;
-                                line-height: 150%;
-                                background: linear-gradient(271deg, #F1ABED 19.73%, #BFFFF8 49.73%, #17F6A0 79.73%);
-                                background-clip: text;
-                                -webkit-background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                                text-align: center;
-                            }
-                            &::before {
-                                content: '';
-                                position: absolute;
-                                left: 50%;
-                                bottom: calc(100% - 0.4rem);
-                                width: 2.2rem;
-                                height: 1.4rem;
-                                background-image: url("../images/event2_txtbox_tail.svg");
-                                background-repeat: no-repeat;
-                                transform: translateX(-50%);
-                            }
-                        }
-                        &::before {
-                            content: '';
-                            display: block;
-                            height: 21rem;
-                            background-image: url("../images/event2_box.svg");
-                            background-repeat: no-repeat;
-                            background-size: contain;
-                            background-position: center;
-                        }
+                @keyframes star-idle {
+                    0%, 100% {
+                      transform: translateY(0) scale(1);
                     }
+                    50% {
+                      transform: translateY(-12px) scale(1.1);
+                    }
+                  }
+                &3 {
+                    width: 16%;
+                    right: 2.13%;
+                    bottom: 8.91%;
+                    background-image: url("../images/obj-kv3.svg");
+                    animation: heart-idle 3s ease-in-out infinite;
                 }
-                +.content { 
-                    margin-top: 2rem;
+                @keyframes heart-idle {
+                    0%, 100% {
+                      transform: translateY(0) rotateY(-10deg);
+                    }
+                    50% {
+                      transform: translateY(-8px) rotateY(10deg);
+                    }
                 }
             }
-            @media (min-width: 768px) {
-                .content {
-                    padding: 0;
+        }
+        .kv-body {
+            margin-top: -16%;
+            .dday {
+                position: relative;
+                text-align: center;
+                .dday-txt {
+                    display: inline-block;
+                    padding: .8rem 1.6rem;
+                    font-family: 'Gmarket Sans';
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    line-height: 150%;
+                    color: #fff;
+                    background-color: #454545;
+                    border-radius: 9.9rem;
+                    .accent {
+                        display: inline-block;
+                        vertical-align: top;
+                        color: #5ED99B;
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                    width: 2.2rem;
+                    height: 1.4rem;
+                    background-image: url("../images/obj_txtbox_tail2.svg");
+                    background-repeat: no-repeat;
+                    transform: translateX(-50%);
+                }
+            }
+            .count-wrap {
+                margin-top: 2.3rem;
+                text-align: center;
+                .count-txt {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 140%;
+                    color: #fff;
+                }
+                .count {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    margin-top: 1.6rem;
+                    .flip-card {
+                        position: relative;
+                        width: 4rem;
+                        height: 7rem;
+                        perspective: 1000px;
+                    }
+                    .top, .bottom {
+                        background-size: contain;
+                    }
+                    .top, .bottom, .leaf-front, .leaf-back {
+                        position: absolute;
+                        left: 0; width: 100%; height: 50%;
+                        background-size: 100% 200%; /* 이미지를 전체의 2배로 키워 상/하단 분리 */
+                        background-repeat: no-repeat;
+                        backface-visibility: hidden;
+                        -webkit-backface-visibility: hidden;
+                        // background-color: #333; /* 이미지 로드 전 배경색 */
+                    }
+            
+                    .top, .leaf-front {
+                        top: 0;
+                        background-position: top; /* 이미지 윗부분만 표시 */
+                        border-bottom: 1px solid rgba(0,0,0,0.3);
+                    }
+            
+                    .bottom, .leaf-back {
+                        bottom: 0;
+                        background-position: bottom; /* 이미지 아랫부분만 표시 */
+                    }
+            
+                    /* 4. 애니메이션 핵심 (Bounce 효과) */
+                    .leaf {
+                        position: absolute;
+                        top: 0; width: 100%; height: 50%;
+                        z-index: 2;
+                        transform-origin: bottom;
+                        transform-style: preserve-3d;
+                        transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), 
+                                    opacity 0.1s; /* 짧은 페이드 인/아웃 */
+                        
+                        opacity: 0; /* 평소에는 숨김 */
+                        pointer-events: none;
+                    }
+            
+                    .flipping .leaf {
+                        opacity: 1;
+                    }
+            
+                    /* 콤마 스타일 */
+                    .comma {display: inline-block; font-size: 3rem; font-weight: 400; line-height: 140%; margin: 0 2px; color: #DBDBDB;}
                 }
             }
         }
@@ -362,7 +328,7 @@ body.stop {
                                 top: calc(100% - 0.4rem);
                                 width: 2.2rem;
                                 height: 1.4rem;
-                                background-image: url("../images/event2_txtbox_tail.svg");
+                                background-image: url("../images/obj_txtbox_tail.svg");
                                 background-repeat: no-repeat;
                                 transform: translateX(-50%) rotate(180deg) scaleX(-1);
                             }
@@ -529,14 +495,6 @@ body.stop {
                         }
                     }
                 }
-            }
-        }
-    }
-    &.welcome {
-        .section-head {
-            padding: 0 2rem;
-            .note {
-                padding-top: .2rem;
             }
         }
     }
@@ -1278,7 +1236,43 @@ body.stop {
             }
         }
         .overlay-body {
-            height: 100%;
+            height: calc(100vh - 5rem);
+            padding-top: 2rem;
+            overflow-y: auto;
+            .content {
+                padding: 2rem
+            }
+            .content-tit {
+                display: inline-block;
+                padding-bottom: 3rem;
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 140%;
+                color: #0c0c0c;
+            }
+            .terms-list {
+                >li {
+                    +li {
+                        padding-top: 3rem;
+                    }
+                }
+                .list-tit {
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    line-height: 140%;
+                    color: #0c0c0c;
+                    ~.list-txt {
+                        padding-top: 1.2rem;
+                    }
+                }
+                .list-txt {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 140%;
+                    color: #0c0c0c;
+                }
+            }
         }
     }
     &.hidden {

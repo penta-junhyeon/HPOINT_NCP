@@ -44,11 +44,8 @@
             <section class="section pre-regi">
                 <div id='preRegi' class="anchor-pin"></div>
                 <div class="inner">
-                    <div class="content event1">
-                        <img src="../assets/images/section_event1.png" alt="NEW 오픈 축하 기념! 2억원 상당 포인트가 쏟아진다! 2.23~3.22 Event 1 얼리버드 경품 EVENT 사전 알림 신청하면 경품 응모 완료! 추첨을 통해 2만 분께 쇼핑 지원금을 드립니다. 당첨자 발표: 2026.3.31(화) 예정 *당첨을 위해 마케팅 정보 [앱 표시/문자] 동의 유지 필수!">
-                    </div>
-                    <div class="content event2">
-                        <img src="../assets/images/section_event2.png" alt="Event 2 100% 당첨! 랜덤 포인트 박스 사전 알림 신청만 해도 즉시 포인트가 적립되는 포인트 박스를 열 수 있어요! 10~10,000P 사이의 포인트가 들어있어요">
+                    <div class="content event">
+                        <img src="../assets/images/section_event.png" alt="NEW 오픈 축하 기념! 2억원 상당 포인트가 쏟아진다! 2.23~3.22 Event 1 얼리버드 경품 EVENT 사전 알림 신청하면 경품 응모 완료! 추첨을 통해 2만 분께 쇼핑 지원금을 드립니다. 당첨자 발표: 2026.3.31(화) 예정 *당첨을 위해 마케팅 정보 [앱 표시/문자] 동의 유지 필수!">
                     </div>
                 </div>
             </section>
@@ -121,7 +118,7 @@
                     </li>
                     <li>
                         <p class="notice-txt">
-                            본 사전 알림 신청 이벤트는 진행 기간 동안만 참여 가능합니다. (2026. 2. 26 ~ 2026. 3. 22)
+                            본 사전 알림 신청 이벤트는 진행 기간 동안만 참여 가능합니다. (2026. 2. 26 ~ 2026. 4. 06)
 
                         </p>
                     </li>
@@ -269,23 +266,6 @@
             </div>
         </div>
 
-        <!-- 약관 overlay -->
-        <div class="overlay terms hidden">
-            <div class="overlay-container">
-                <div class="overlay-head">
-                    <h2 class="tit">*이용 약관 타이틀*</h2>
-                    <div class="overlay-close">
-                        <button type="button" class="btn close">
-                            <span class="btn-txt blind">닫기</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="overlay-body">
-                    <!-- 이용 약관 컨텐츠 영역 -->
-                </div>
-            </div>
-        </div>
-
         <!-- 비회원 -->
         <div class="modal fade" id="guest" tabindex="-1" aria-labelledby="guest" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -300,13 +280,13 @@
                     <div class="modal-body">
                         <p class="modal-txt">
                             <span class="accent">서비스 이용을 위한 필수 동의 항목</span>
-                            <button type="button" class="btn notice terms-active line">
+                            <button type="button" class="btn notice terms-active line" data-modal="tos">
                                 <span class="btn-txt">H.Point 이용약관</span>,
                             </button>
-                            <button type="button" class="btn notice terms-active line">
+                            <button type="button" class="btn notice terms-active line" data-modal="privacy-consent">
                                 <span class="btn-txt">개인정보 수집·이용동의</span>,
                             </button>
-                            <button type="button" class="btn notice terms-active line">
+                            <button type="button" class="btn notice terms-active line" data-modal="provision">
                                 <span class="btn-txt">개인정보 제3자제공동의</span>
                             </button>에 동의합니다.
                         </p>
@@ -315,6 +295,116 @@
                         <button type="button" class="btn close">
                             <span class="btn-txt">동의하고 시작하기</span>
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- H.Point 이용약관 -->
+        <div class="overlay terms tos hidden">
+            <div class="overlay-container">
+                <div class="overlay-head">
+                    <h2 class="tit">H.Point 이용약관</h2>
+                    <div class="overlay-close">
+                        <button type="button" class="btn close">
+                            <span class="btn-txt blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="overlay-body">
+                    <div class="content">
+                        <strong class="content-tit">제1장 총칙</strong>
+                        <ul class="terms-list">
+                            <li>
+                                <strong class="list-tit">제1조 (목적)</strong>
+                                <p class="list-txt">본 약관은 H.Point회원(아래에서 정의)이 주식회사 현대백화점(이하 "당사")이 제공하는 H.Point 서비스를 이용함에 있어 H.Point회원과 당사의 제반 권리·의무 및 관련절차 등을 규정하는데 그 목적이 있습니다.</p>
+                            </li>
+                            <li>
+                                <strong class="list-tit">제2조 (정의)</strong>
+                                <p class="list-txt">본 약관에서 사용하는 주요 용어의 정의는 다음과 같습니다.</p>
+                                <p class="list-txt">1. "H.Point 회원"(이하 "회원")이란 당사 또는 제휴사의 영업점이나 홈페이지(PC/모바일웹), 모바일앱을 통해 본 약고나 제5조에 정해진 가입 절차에 따라 회원가입, 카드발급, 카드등록 등의 정차를 진행하여 정상적으로 H.Point 서비스를 이용할 수 있는 권한을 부여 받은 자를 말합니다.</p>
+                                <p class="list-txt">2. "H.Point 서비스"(이하 "H.Point 서비스" 또는 "서비스"라 함)란 당사와 제휴사가 회원에게 제공하는 포인트 적립, 사용, 할인, 이벤트 참여 등의 고객 서비스 프로그램으로서, 그 주요 내용은 본 약관 제3조에서 명시된 바와 같습니다.</p>
+                                <p class="list-txt">3. "H.Point카드"(이하 "H.Point카드" 또는 "카드"라 함)란 회원이 H.Point 서비스를 이용할 수 있도록 당사 또는 제휴사가 발급한 포인트카드(모바일카드 포함)로서, 카드의 종류는 다음과 같습니다.<br>
+                                    &nbsp; 1) 일반 H.Point 카드 : 단순 포인트 적립 또는 사용 등 H.Point 서비스만 가능한 카드<br>
+                                    &nbsp; 2) H.Point 제휴카드 : 제휴사 발행하는 신용카드, 체크카드, 선불카드에 H.Point 서비스 기능이 탑재된 카드</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 개인정보 수집·이용동의 약관 -->
+        <div class="overlay terms privacy-consent hidden">
+            <div class="overlay-container">
+                <div class="overlay-head">
+                    <h2 class="tit">개인정보 수집·이용동의</h2>
+                    <div class="overlay-close">
+                        <button type="button" class="btn close">
+                            <span class="btn-txt blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="overlay-body">
+                    <div class="content">
+                        <strong class="content-tit">제1장 총칙</strong>
+                        <ul class="terms-list">
+                            <li>
+                                <p class="list-txt">"H.Point 멤버십(이하 "H.Point"라 함)" 서비스를 운영하는 ㈜현대백화점(이하 "당사"라 함)의 "H.Point 회원"(이하 "회원"이라 함)은 『개인정보 보호법』 제30조에 따라 고객에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 "H.Point 개인(위치)정보처리방침(이하 "처리방침"이라 함)"을 수립ㆍ공개 합니다.</p>
+                            </li>
+                            <li>
+                                <strong class="list-tit">제1조 개인정보 처리 목적</strong>
+                                <p class="list-txt">"H.Point"는 다음의 목적을 위하여 회원님의 개인정보를 처리합니다. 처리하고 있는 개인정보는 목적 외의 용도로 이용되지 않으며, 이용 목적이 변경되는 경우에는 『개인정보 보호법』 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+                                <ul class="sublist-list">
+                                    <li>
+                                        <strong class="list-tit">가. 회원 가입 및 관리</strong>
+                                        <p class="list-txt">회원제 서비스 제공을 위한 회원 가입의사 확인, 본인 확인, 만14세 미만 가입 물가 확인, 회원자격 유지 및 관리 목적으로 개인정보를 처리합니다.</p>
+                                    </li>
+                                    <li>
+                                        <strong class="list-tit">나. 서비스 제공을 위한 계약 이행 및 정산</strong>
+                                        <p class="list-txt">H.Point 적립/사용/전환/충전/기부 서비스 제공, 간편결제 카드/계좌 등록 및 결제, 클럽서비스 이용, 행태정보 기반 서비스 제공 목적으로 개인정보를 처리합니다.</p>
+                                    </li>
+                                    <li>
+                                        <strong class="list-tit">다. 안내사항 고지 및 상담</strong>
+                                        <p class="list-txt">서비스 안내, 회원 및 가맹점 문의 결과 통보의 목적으로 개인정보를 처리합니다.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 개인정보 제3자 제공동의 -->
+        <div class="overlay terms provision hidden">
+            <div class="overlay-container">
+                <div class="overlay-head">
+                    <h2 class="tit">개인정보 제3자 제공동의</h2>
+                    <div class="overlay-close">
+                        <button type="button" class="btn close">
+                            <span class="btn-txt blind">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="overlay-body">
+                    <div class="content">
+                        <strong class="content-tit">제1장 총칙</strong>
+                        <ul class="terms-list">
+                            <li>
+                                <strong class="list-tit">제1조 (목적)</strong>
+                                <p class="list-txt">본 약관은 H.Point회원(아래에서 정의)이 주식회사 현대백화점(이하 "당사")이 제공하는 H.Point 서비스를 이용함에 있어 H.Point회원과 당사의 제반 권리·의무 및 관련절차 등을 규정하는데 그 목적이 있습니다.</p>
+                            </li>
+                            <li>
+                                <strong class="list-tit">제2조 (정의)</strong>
+                                <p class="list-txt">본 약관에서 사용하는 주요 용어의 정의는 다음과 같습니다.</p>
+                                <p class="list-txt">1. "H.Point 회원"(이하 "회원")이란 당사 또는 제휴사의 영업점이나 홈페이지(PC/모바일웹), 모바일앱을 통해 본 약고나 제5조에 정해진 가입 절차에 따라 회원가입, 카드발급, 카드등록 등의 정차를 진행하여 정상적으로 H.Point 서비스를 이용할 수 있는 권한을 부여 받은 자를 말합니다.</p>
+                                <p class="list-txt">2. "H.Point 서비스"(이하 "H.Point 서비스" 또는 "서비스"라 함)란 당사와 제휴사가 회원에게 제공하는 포인트 적립, 사용, 할인, 이벤트 참여 등의 고객 서비스 프로그램으로서, 그 주요 내용은 본 약관 제3조에서 명시된 바와 같습니다.</p>
+                                <p class="list-txt">3. "H.Point카드"(이하 "H.Point카드" 또는 "카드"라 함)란 회원이 H.Point 서비스를 이용할 수 있도록 당사 또는 제휴사가 발급한 포인트카드(모바일카드 포함)로서, 카드의 종류는 다음과 같습니다.<br>
+                                    &nbsp; 1) 일반 H.Point 카드 : 단순 포인트 적립 또는 사용 등 H.Point 서비스만 가능한 카드<br>
+                                    &nbsp; 2) H.Point 제휴카드 : 제휴사 발행하는 신용카드, 체크카드, 선불카드에 H.Point 서비스 기능이 탑재된 카드</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
