@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>더현대 온라인 사전 신청</title>
 
+    <!-- Swiper -->
+    <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
+    <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../assets/lib/bootstrap/bootstrap.min.css">
     <script src="../assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
@@ -52,6 +56,12 @@
                     </li>
                     <li>
                         <a href="#welcome" class="anchor-txt">Coming Soon</a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#preRegi2" class="anchor-txt">사전 신청 혜택</a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#invite2" class="anchor-txt">친구 초대하기</a>
                     </li>
                 </ul>
             </div>
@@ -118,6 +128,65 @@
                 <div id="welcome" class="anchor-pin"></div>
                 <div class="inner">
                     <img src="../assets/images/section_welcome.png" alt="오픈 후 가입만 해도 신규 가입 웰컴팩 증정 *계정당 최초 1회 한정 할인 쿠폰 15%, 포인트 적입 최대 5,000P(앱 설치 시 3천+PUSH 동의 시 2천P, 할인권 1만원)">
+                </div>
+            </section>
+            <section class="section pre-regi">
+                <div id='preRegi2' class="anchor-pin"></div>
+                <div class="inner">
+                    <div class="content event">
+                        <img src="../assets/images/section_event.png" alt="NEW 오픈 축하 기념! 2억원 상당 포인트가 쏟아진다! 2.23~3.22 Event 1 얼리버드 경품 EVENT 사전 알림 신청하면 경품 응모 완료! 추첨을 통해 2만 분께 쇼핑 지원금을 드립니다. 당첨자 발표: 2026.3.31(화) 예정 *당첨을 위해 마케팅 정보 [앱 표시/문자] 동의 유지 필수!">
+                    </div>
+                </div>
+            </section>
+            <section class="section invite">
+                <div id="invite2" class="anchor-pin"></div>
+                <div class="inner">
+                    <div class="section-head">
+                        <img src="../assets/images/invite_tit.png" alt="초대만 해도 추가 포인트 내가 보낸 초대장으로 친구가 신청을 완료할 때마다 랜덤 포인트 박스가 지급돼요!">
+                    </div>
+                    <div class="section-body">
+                        <div class="content point-reward">
+                            <div class="content-obj">
+                                <div class="txt-wrap">
+                                    <p class="txt">박스를 열면 랜덤 포인트 즉시 적립!</p>
+                                </div>
+                                <div class="obj-wrap">
+                                    <img src="../assets/images/invite_gift_obj.svg" alt=" ">
+                                </div>
+                            </div>
+                            <button type="button" class='btn'>
+                                <p class="btn-txt">
+                                    초대장 보내고 최대 1만 P 받기
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                                        <path d="M4 5L10 11C10 11 5.81818 15.1818 4 17" stroke="black" stroke-width="1.5" />
+                                    </svg>
+                                </p>
+                            </button>
+                        </div>
+                        <div class="content my-point">
+                            <div class="content-head">
+                                <em class="tit">
+                                    내가 모은 포인트<br>
+                                    <span class="point">199,999 <span class="unit">P</span></span>
+                                </em>
+                            </div>
+                            <div class="content-body">
+                                <div class="item friend">
+                                    <em class="tit">내가 초대한 친구</em>
+                                    <span class="txt">1,999 <span class="unit">명</span></span>
+                                </div>
+                                <div class="item point-box">
+                                    <em class="tit">나의 포인트 박스</em>
+                                    <span class="txt">
+                                        2<span class="unit">개</span>
+                                        <button type="button" class="btn point box-open">
+                                            <span class="btn-txt">열기</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

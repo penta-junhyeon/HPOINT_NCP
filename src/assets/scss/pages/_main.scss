@@ -56,7 +56,7 @@ body.stop {
         justify-content: space-between;
         text-align: center;
         >li {
-            // width: calc(100%/3);
+            max-width: calc(100%/3);
             padding: 1.3rem 0;
             .anchor-txt {
                 font-size: 1.5rem;
